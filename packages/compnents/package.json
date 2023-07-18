@@ -1,0 +1,21 @@
+{
+  "name": "@zhao/components",
+  "version": "1.0.0",
+  "description": "基于vue3测试进行开发的组件库",
+  "module": "dist/es/zhao-ui.esm-bundler.js",
+   "main":"dist/lib/zhao-ui.cjs.js",
+  "types": "dist/es/index.d.ts",
+  "buildoption":{
+    "name":"zhao-ui",
+    "format":[
+      "esm-bundler",
+      "cjs"
+    ]
+   },
+  "scripts": {
+    "rollup":"rollup --config rollup.config.js -w --bundleConfigAsCjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

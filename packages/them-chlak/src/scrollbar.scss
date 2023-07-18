@@ -1,0 +1,35 @@
+.el-scroll {
+    overflow: auto;
+    width: inherit;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 10px;
+        background-color: transparent
+    }
+
+    &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        height: auto;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece {}
+
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            width: 8px;
+            height: 100px;
+            background-color: rgba(157, 156, 156,.6);
+            border-radius: 5px;
+        }
+    }
+    &::-webkit-scrollbar-corner {}
+
+    &::-webkit-resizer {}
+}

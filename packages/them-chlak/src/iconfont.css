@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id  */
+  src: url('./font/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin:0 4px;
+}
+
+.icon-add:before {
+  content: "\e664";
+}
+
+.icon-arrow-down:before {
+  content: "\e665";
+}
+
+.icon-ashbin:before {
+  content: "\e666";
+}
+
+.icon-arrow-right:before {
+  content: "\e667";
+}
+
+.icon-bottom:before {
+  content: "\e668";
+}
+
+.icon-bad:before {
+  content: "\e669";
+}
+
+.icon-chart-bar:before {
+  content: "\e66a";
+}
+
+.icon-close:before {
+  content: "\e66b";
+}
+
+.icon-comment:before {
+  content: "\e66c";
+}
+
+.icon-direction-down:before {
+  content: "\e66d";
+}
+
+.icon-copy:before {
+  content: "\e66e";
+}
+
+.icon-direction-right:before {
+  content: "\e66f";
+}
+
+.icon-direction-up:before {
+  content: "\e670";
+}
+
+.icon-direction-left:before {
+  content: "\e671";
+}
+
+.icon-electronics:before {
+  content: "\e672";
+}
+
+.icon-elipsis:before {
+  content: "\e673";
+}
+
+.icon-export:before {
+  content: "\e674";
+}
+
+.icon-edit:before {
+  content: "\e675";
+}
+
+.icon-email:before {
+  content: "\e676";
+}
+
+.icon-error:before {
+  content: "\e677";
+}
+
+.icon-home:before {
+  content: "\e678";
+}
+
+.icon-file-open:before {
+  content: "\e679";
+}
+
+.icon-link:before {
+  content: "\e67a";
+}
+
+.icon-menu:before {
+  content: "\e67b";
+}
+
+.icon-loading:before {
+  content: "\e67c";
+}
+
+.icon-navigation:before {
+  content: "\e67d";
+}
+
+.icon-select:before {
+  content: "\e67e";
+}
+
+.icon-setting:before {
+  content: "\e67f";
+}
