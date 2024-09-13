@@ -43,8 +43,9 @@
 </template>
 ```
 <el-space :size="[10,10]" :wrap='true'>
-      <el-card>
-      <template v-slot:header>
+      <!-- <el-card> -->
+      <div>这是历史的榜样哈哈哈</div>
+      <!-- <template v-slot:header>
             <div>这是card的头部</div>
       </template>
       <template v-slot:body>
@@ -73,8 +74,8 @@
       </template>
       <template v-slot:body>
             <div>这是body类容</div>
-      </template>
-      </el-card>
+      </template> -->
+      <!-- </el-card> -->
 </el-space>
 
 ## 属性

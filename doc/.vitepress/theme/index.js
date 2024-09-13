@@ -9,6 +9,7 @@ import {ElStart} from "@zhao/components/start"
 import {ElInput} from "@zhao/components/input";
 import {ElRow} from "@zhao/components/row";
 import {ElCol} from "@zhao/components/col";
+import {ElText} from "@zhao/components/text";
 
 import "@zhao/them-chlak/src/index.scss"
 export default {
@@ -24,5 +25,6 @@ export default {
         app.use(ElInput);
         app.use(ElRow);
         app.use(ElCol);
+        app.use(ElText);
     }
 }

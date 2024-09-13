@@ -1,5 +1,5 @@
 import { spawn } from "child_process";
-let withTaskname = <T>(name: string, fn: T) => Object.assign(fn as Function, { displayName: name });
+let withTaskname = <T>(name: string, fn:T) => Object.assign(fn as Function, { displayName: name });
 let run = (command: string, projectPath: string) => {
     return new Promise((reslove, reject) => {
         const [cmd, ...arg] = command.split(" ");

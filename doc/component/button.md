@@ -1,5 +1,4 @@
 ## Button 图标的使用
-
 ```vue
 <script lang='ts' setup>
     import {ref} from "vue";
@@ -16,9 +15,10 @@
 <Button type='success' size='default' icon="icon-bottom">成功按钮</Button>
 <Button type='warning' size='default' icon="icon-bad">警告按钮</Button>
 <Button type='info' size='default' icon="icon-comment">通知按钮</Button>
-<el-row>
+
+<div style="margin:20px 0">
     <Button type='default' size='default' icon="icon-direction-up">默认按钮</Button>
-</el-row>
+</div>
 
 
 ## 图标尺寸

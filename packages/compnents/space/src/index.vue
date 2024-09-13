@@ -1,9 +1,7 @@
 <template>
     <div :class="className" :style="containerStyle">
-        <div :class="classes" :style="itemStyle">
         <slot>
         </slot>
-        </div>
     </div>
 </template>
 
@@ -11,6 +9,7 @@
 import { isAarray, isNumber } from "@zhao/utils";
 import { defineComponent, computed, CSSProperties, StyleValue, ref, watchEffect } from "vue";
 import { spaceProps } from "./index"
+import { renderSlot } from "vue";
 
 const SIZE_MAP = {
     small: 8,
@@ -22,10 +21,9 @@ const SIZE_MAP = {
 export default defineComponent({
     name: 'ElSpace',
     props: spaceProps,
-    setup(props, { slots }:{slots:any}) {
-        // const vnode = slots!==null&& slots.default();
-        // console.log(vnode)
-        // 生成类名
+    setup(props, { slots }) {
+
+
         let className = computed(() => {
             return ["el-space", "el-space--" + props.direction, props.class]
         })

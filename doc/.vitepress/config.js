@@ -64,10 +64,19 @@ module.exports = {
                             { text: "scrollbar 滚动", link: '/component/scrollbar' },
                             { text: "card 卡片", link: '/component/card' },
                             { text: "space 区域块", link: '/component/space' },
-                            {text:'start 星星评分',link:'/component/start'},
-                            {text:'input 组件',link:'/component/input'},
-                            {text:"layout布局",link:"/component/layout"}
+                            {text:"layout布局",link:"/component/layout"},
+                            {text:"text组件",link:"/component/text"},
                         ]
+                    },
+                    {
+                        text:"表单组件",
+                        items:[
+                            {text:'input 组件',link:'/component/input'},
+                        ]
+                    },
+                    {
+                        text:"功能组件",
+                        items:[  {text:'start 星星评分',link:'/component/start'}]
                     }
                 ]
             }

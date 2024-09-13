@@ -5,8 +5,6 @@ interface alignment {
     alignments: "center" | "normal" | "stretch"
 }
 
-
-
 type arr = [
     "large",
     "default",

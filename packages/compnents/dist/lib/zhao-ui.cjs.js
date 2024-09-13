@@ -1,28 +1,27 @@
 'use strict';
 
 var vue = require('vue');
-var utils = require('@zhao/utils');
 
-var script$c = vue.defineComponent({
+var script$d = vue.defineComponent({
   setup() {
     return {};
   }
 });
 
-function render$b(_ctx, _cache, $props, $setup, $data, $options) {
+function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createElementBlock("div");
 }
 
-script$c.render = render$b;
-script$c.__file = "autocomplete/src/index.vue";
+script$d.render = render$c;
+script$d.__file = "autocomplete/src/index.vue";
 
-const withInstall$c = com => {
+const withInstall$d = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElAutocomplete = withInstall$c(script$c);
+const ElAutocomplete = withInstall$d(script$d);
 
 const getPassProps$5 = {
   size: {
@@ -46,7 +45,7 @@ const getPassProps$4 = {
   }
 };
 
-var script$b = vue.defineComponent({
+var script$c = vue.defineComponent({
   name: "ZIcon",
   props: getPassProps$4,
   setup(props) {
@@ -56,22 +55,22 @@ var script$b = vue.defineComponent({
   }
 });
 
-function render$a(_ctx, _cache, $props, $setup, $data, $options) {
+function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createElementBlock("i", {
     class: vue.normalizeClass(["iconfont", [_ctx.props.icon]])
   }, [vue.renderSlot(_ctx.$slots, "default")], 2 /* CLASS */);
 }
 
-script$b.render = render$a;
-script$b.__file = "icon/src/icon.vue";
+script$c.render = render$b;
+script$c.__file = "icon/src/icon.vue";
 
-const withInstall$b = com => {
+const withInstall$c = com => {
   com.install = function (app) {
     app.component(com.name, com);
   };
   return com;
 };
-const ZIcon$1 = withInstall$b(script$b);
+const ZIcon$1 = withInstall$c(script$c);
 
 function styleInject(css, ref) {
   if (ref === void 0) ref = {};
@@ -106,7 +105,7 @@ const _hoisted_1$5 = {
 };
 const _hoisted_2$2 = /*#__PURE__*/vue.createStaticVNode("<div class=\"loader-inner line-spin-fade-loader\"><div class=\"loader-item\"></div><div class=\"loader-item\"></div><div class=\"loader-item\"></div><div class=\"loader-item\"></div><div class=\"loader-item\"></div><div class=\"loader-item\"></div><div class=\"loader-item\"></div><div class=\"loader-item\"></div></div>", 1);
 const _hoisted_3$1 = [_hoisted_2$2];
-var script$a = /*#__PURE__*/vue.defineComponent({
+var script$b = /*#__PURE__*/vue.defineComponent({
   __name: 'loading',
   setup(__props) {
     return (_ctx, _cache) => {
@@ -115,13 +114,13 @@ var script$a = /*#__PURE__*/vue.defineComponent({
   }
 });
 
-script$a.__file = "loading/loading.vue";
+script$b.__file = "loading/loading.vue";
 
-var script$9 = vue.defineComponent({
+var script$a = vue.defineComponent({
   name: "Button",
   components: {
     ZIcon: ZIcon$1,
-    Loading: script$a
+    Loading: script$b
   },
   props: getPassProps$5,
   setup(props, {
@@ -159,7 +158,7 @@ var script$9 = vue.defineComponent({
 });
 
 const _hoisted_1$4 = ["disabled"];
-function render$9(_ctx, _cache, $props, $setup, $data, $options) {
+function render$a(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_z_icon = vue.resolveComponent("z-icon");
   const _component_Loading = vue.resolveComponent("Loading");
   return vue.openBlock(), vue.createElementBlock("button", {
@@ -174,16 +173,16 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   })) : vue.createCommentVNode("v-if", true), vue.renderSlot(_ctx.$slots, "default"), vue.renderSlot(_ctx.$slots, "loading")], 10 /* CLASS, PROPS */, _hoisted_1$4);
 }
 
-script$9.render = render$9;
-script$9.__file = "button/src/buttons.vue";
+script$a.render = render$a;
+script$a.__file = "button/src/buttons.vue";
 
-const withInstall$a = com => {
+const withInstall$b = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const Button = withInstall$a(script$9);
+const Button = withInstall$b(script$a);
 
 var shadow;
 (function (shadow) {
@@ -204,7 +203,7 @@ const cardProps = {
   }
 };
 
-var script$8 = vue.defineComponent({
+var script$9 = vue.defineComponent({
   name: "ElCard",
   props: cardProps,
   setup(props, {
@@ -233,7 +232,7 @@ const _hoisted_1$3 = {
   key: 0,
   class: "el-card__header"
 };
-function render$8(_ctx, _cache, $props, $setup, $data, $options) {
+function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createElementBlock("div", {
     class: vue.normalizeClass([_ctx.classes, "is-always-shadow"])
   }, [_ctx.slots.header || _ctx.header ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$3, [vue.renderSlot(_ctx.$slots, "header", {}, () => [vue.createTextVNode(vue.toDisplayString(_ctx.header), 1 /* TEXT */)])])) : vue.createCommentVNode("v-if", true), vue.createElementVNode("div", {
@@ -242,16 +241,16 @@ function render$8(_ctx, _cache, $props, $setup, $data, $options) {
   }, [vue.renderSlot(_ctx.$slots, "body", {}, () => [vue.createTextVNode(vue.toDisplayString(_ctx.body), 1 /* TEXT */)])], 4 /* STYLE */)], 2 /* CLASS */);
 }
 
-script$8.render = render$8;
-script$8.__file = "card/src/index.vue";
+script$9.render = render$9;
+script$9.__file = "card/src/index.vue";
 
-const withInstall$9 = com => {
+const withInstall$a = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElCard = withInstall$9(script$8);
+const ElCard = withInstall$a(script$9);
 
 const getPassProps$3 = {
   type: {
@@ -271,7 +270,7 @@ const getPassProps$3 = {
   }
 };
 
-var script$7 = vue.defineComponent({
+var script$8 = vue.defineComponent({
   name: "Links",
   components: {
     ZIcon: ZIcon$1
@@ -290,7 +289,7 @@ var script$7 = vue.defineComponent({
 });
 
 const _hoisted_1$2 = ["href"];
-function render$7(_ctx, _cache, $props, $setup, $data, $options) {
+function render$8(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_ZIcon = vue.resolveComponent("ZIcon");
   return vue.openBlock(), vue.createElementBlock("span", {
     class: vue.normalizeClass(["el-link", [_ctx.props.type == 'primary' ? 'el-link--primary' : _ctx.props.type == 'success' ? 'el-link--success' : _ctx.props.type == 'warning' ? 'el-link--warning' : _ctx.props.type == 'info' ? 'el-link--info' : _ctx.props.type == 'danger' ? 'el-link--danger' : 'el-link--default', _ctx.props.underline && !_ctx.isDisabled ? 'is-underline' : '', _ctx.isDisabled ? 'is-disabled' : '']])
@@ -305,16 +304,16 @@ function render$7(_ctx, _cache, $props, $setup, $data, $options) {
   })], 2 /* CLASS */);
 }
 
-script$7.render = render$7;
-script$7.__file = "link/src/link.vue";
+script$8.render = render$8;
+script$8.__file = "link/src/link.vue";
 
-const withInstall$8 = com => {
+const withInstall$9 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const Links = withInstall$8(script$7);
+const Links = withInstall$9(script$8);
 
 const getPassProps$2 = {
   height: {
@@ -352,7 +351,7 @@ const getPassProps$2 = {
   }
 };
 
-var script$6 = vue.defineComponent({
+var script$7 = vue.defineComponent({
   name: "ScrollBar",
   props: getPassProps$2,
   setup(props) {
@@ -400,7 +399,7 @@ var script$6 = vue.defineComponent({
   }
 });
 
-function render$6(_ctx, _cache, $props, $setup, $data, $options) {
+function render$7(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createElementBlock("div", {
     class: "el-scroll",
     ref: "scroll",
@@ -416,16 +415,159 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))], 6 /* CLASS, STYLE */)], 4 /* STYLE */);
 }
 
-script$6.render = render$6;
-script$6.__file = "scrollBar/src/index.vue";
+script$7.render = render$7;
+script$7.__file = "scrollBar/src/index.vue";
 
-const withInstall$7 = com => {
+const withInstall$8 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ScrollBar = withInstall$7(script$6);
+const ScrollBar = withInstall$8(script$7);
+
+const isAarray = arr => {
+  return Array.isArray(arr);
+};
+const isNumber = val => {
+  return typeof val === "number";
+};
+const isObject = val => {
+  return typeof val === 'object';
+};
+
+const rowContextKey = Symbol("rowContextKey");
+
+/**
+ * js 生成BEM 规范 (zhao__button--success);
+ * author zhaoxunyin
+ */
+/**
+ *
+ * @param namespace
+ * @param bolck
+ * @param blockSuffix
+ * @param element
+ * @param modifier
+ * @returns
+ */
+const namespace = 'el';
+function _bem(namespace, bolck, blockSuffix, element, modifier) {
+  let cls = `${namespace}-${bolck}`;
+  if (blockSuffix) {
+    cls += `-${blockSuffix}`;
+  }
+  if (element) {
+    cls += `__${element}`;
+  }
+  if (modifier) {
+    cls += `--${modifier}`;
+  }
+  return cls;
+}
+/**
+ *
+ * @param block
+ * @returns
+ */
+function createBEM(block) {
+  /**
+   *
+   * @param bolck
+   * @returns
+   */
+  const b = (blockSuffix = "") => _bem(namespace, block, blockSuffix, "", "");
+  /**
+   *
+   * @param element
+   * @returns
+   */
+  const e = element => element ? _bem(namespace, block, "", element, "") : "";
+  /**
+   *
+   * @param modifier
+   * @returns
+   */
+  const m = (modifier = "") => modifier ? _bem(namespace, block, "", "", modifier) : "";
+  /**
+   *
+   * @param element
+   * @param modifier
+   * @returns
+   */
+  const em = (element = "", modifier = "") => element && modifier ? _bem(namespace, block, "", element, modifier) : "";
+  /**
+   *
+   * @param blockSuffix
+   * @param element
+   * @returns
+   */
+  const be = (blockSuffix = "", element = "") => blockSuffix && element ? _bem(namespace, block, blockSuffix, element, "") : "";
+  /**
+   *
+   * @param blockSuffix
+   * @param modifier
+   * @returns
+   */
+  const bm = (blockSuffix = "", modifier = "") => blockSuffix && modifier ? _bem(namespace, block, blockSuffix, "", modifier) : "";
+  /**
+   *
+   * @param bolck
+   * @param element
+   * @param modifier
+   * @returns
+   */
+  const bem = (blockSuffix = "", element = "", modifier = "") => block && element && modifier ? _bem(namespace, block, blockSuffix, element, modifier) : "";
+  /**
+   * @param name
+   * @param state
+   * @returns
+   */
+  const is = (name, state) => state && name ? `is-${name}` : "";
+  const cssVar = object => {
+    const styles = {};
+    for (const key in object) {
+      if (object[key]) {
+        styles[`--${namespace}-${key}`] = object[key];
+      }
+    }
+    return styles;
+  };
+  // with block
+  const cssVarBlock = object => {
+    const styles = {};
+    for (const key in object) {
+      if (object[key]) {
+        styles[`--${namespace}-${block}-${key}`] = object[key];
+      }
+    }
+    return styles;
+  };
+  const cssVarName = name => `--${namespace}-${name}`;
+  const cssVarBlockName = name => `--${namespace}-${block}-${name}`;
+  return {
+    b,
+    e,
+    m,
+    em,
+    be,
+    bm,
+    bem,
+    is,
+    cssVar,
+    cssVarBlock,
+    cssVarName,
+    cssVarBlockName
+  };
+}
+/**
+ *
+ * @param name
+ * @returns 创建命名空间
+ */
+function createNamespace(block) {
+  return createBEM(block);
+}
 
 const spaceProps = {
   alignment: {
@@ -480,15 +622,12 @@ const SIZE_MAP = {
   default: 12,
   large: 16
 };
-var script$5 = vue.defineComponent({
+var script$6 = vue.defineComponent({
   name: 'ElSpace',
   props: spaceProps,
   setup(props, {
     slots
   }) {
-    // const vnode = slots!==null&& slots.default();
-    // console.log(vnode)
-    // 生成类名
     let className = vue.computed(() => {
       return ["el-space", "el-space--" + props.direction, props.class];
     });
@@ -523,14 +662,14 @@ var script$5 = vue.defineComponent({
         direction: dir,
         fill
       } = props;
-      if (utils.isAarray(size)) {
+      if (isAarray(size)) {
         const [h = 0, v = 0] = size;
         console.log(h, v);
         horizontalSize.value = h;
         verticalSize.value = v;
       } else {
         let val;
-        if (typeof size == "number" && utils.isNumber(size)) {
+        if (typeof size == "number" && isNumber(size)) {
           val = size;
         } else {
           val = typeof size == "string" && SIZE_MAP[size || 'small'] || SIZE_MAP.small;
@@ -557,28 +696,25 @@ var script$5 = vue.defineComponent({
   }
 });
 
-function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+function render$6(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createElementBlock("div", {
     class: vue.normalizeClass(_ctx.className),
     style: vue.normalizeStyle(_ctx.containerStyle)
-  }, [vue.createElementVNode("div", {
-    class: vue.normalizeClass(_ctx.classes),
-    style: vue.normalizeStyle(_ctx.itemStyle)
-  }, [vue.renderSlot(_ctx.$slots, "default")], 6 /* CLASS, STYLE */)], 6 /* CLASS, STYLE */);
+  }, [vue.renderSlot(_ctx.$slots, "default")], 6 /* CLASS, STYLE */);
 }
 
-script$5.render = render$5;
-script$5.__file = "space/src/index.vue";
+script$6.render = render$6;
+script$6.__file = "space/src/index.vue";
 
-const withInstall$6 = com => {
+const withInstall$7 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElSpace = withInstall$6(script$5);
+const ElSpace = withInstall$7(script$6);
 
-var script$4 = vue.defineComponent({
+var script$5 = vue.defineComponent({
   name: 'ElStart',
   emits: ['checked'],
   props: {
@@ -644,7 +780,7 @@ const _hoisted_1$1 = {
   }
 };
 const _hoisted_2$1 = ["onMouseenter", "onMousedown"];
-function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+function render$5(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1, [(vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.maxValue, item => {
     return vue.openBlock(), vue.createElementBlock("div", {
       key: item,
@@ -671,9 +807,30 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
 var css_248z = "\n.iconfont[data-v-534fa15c] {\r\n  font-size: 24px;\r\n  cursor: pointer;\n}\n.star-item[data-v-534fa15c] {\r\n  margin: 0 3px\n}\r\n";
 styleInject(css_248z);
 
+script$5.render = render$5;
+script$5.__scopeId = "data-v-534fa15c";
+script$5.__file = "start/src/index.vue";
+
+const withInstall$6 = com => {
+  com.install = function (app) {
+    app.component(com === null || com === void 0 ? void 0 : com.name, com);
+  };
+  return com;
+};
+const ElStart = withInstall$6(script$5);
+
+var script$4 = vue.defineComponent({
+  setup() {
+    return {};
+  }
+});
+
+function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  return vue.openBlock(), vue.createElementBlock("div");
+}
+
 script$4.render = render$4;
-script$4.__scopeId = "data-v-534fa15c";
-script$4.__file = "start/src/index.vue";
+script$4.__file = "tooltip/src/index.vue";
 
 const withInstall$5 = com => {
   com.install = function (app) {
@@ -681,28 +838,7 @@ const withInstall$5 = com => {
   };
   return com;
 };
-const ElStart = withInstall$5(script$4);
-
-var script$3 = vue.defineComponent({
-  setup() {
-    return {};
-  }
-});
-
-function render$3(_ctx, _cache, $props, $setup, $data, $options) {
-  return vue.openBlock(), vue.createElementBlock("div");
-}
-
-script$3.render = render$3;
-script$3.__file = "tooltip/src/index.vue";
-
-const withInstall$4 = com => {
-  com.install = function (app) {
-    app.component(com === null || com === void 0 ? void 0 : com.name, com);
-  };
-  return com;
-};
-const ElTooltip = withInstall$4(script$3);
+const ElTooltip = withInstall$5(script$4);
 
 const inputProps = {
   type: {
@@ -766,21 +902,21 @@ const inputProps = {
   }
 };
 
-const withInstall$3 = com => {
+const withInstall$4 = com => {
   com.install = function (app) {
     app.component(com.name, com);
   };
   return com;
 };
-const ZIcon = withInstall$3(script$b);
+const ZIcon = withInstall$4(script$c);
 
-var sizes;
+var sizes$1;
 (function (sizes) {
   sizes["large"] = "large";
   sizes["default"] = "default";
   sizes["small"] = "small";
-})(sizes || (sizes = {}));
-var script$2 = vue.defineComponent({
+})(sizes$1 || (sizes$1 = {}));
+var script$3 = vue.defineComponent({
   name: "ElInput",
   emits: ["blur", "focus", "change", "input", "clear", "update:modelValue"],
   components: {
@@ -899,7 +1035,7 @@ const _hoisted_8 = {
   key: 0,
   class: "text-count"
 };
-function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_Icon = vue.resolveComponent("Icon");
   return vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [_ctx.type !== 'textarea' ? (vue.openBlock(), vue.createElementBlock("div", {
     key: 0,
@@ -944,16 +1080,16 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   }, "\r\n           " + vue.toDisplayString(_ctx.modelValue) + " ", 41 /* TEXT, PROPS, HYDRATE_EVENTS */, _hoisted_7), _ctx.showWordLimit ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_8, vue.toDisplayString(_ctx.textareaText.length) + "/" + vue.toDisplayString(_ctx.maxlength), 1 /* TEXT */)) : vue.createCommentVNode("v-if", true)]))]);
 }
 
-script$2.render = render$2;
-script$2.__file = "input/src/index.vue";
+script$3.render = render$3;
+script$3.__file = "input/src/index.vue";
 
-const withInstall$2 = com => {
+const withInstall$3 = com => {
   com.install = function (app) {
     app.component(com.name, com);
   };
   return com;
 };
-const ElInput = withInstall$2(script$2);
+const ElInput = withInstall$3(script$3);
 
 const RowJustify = ['start', 'center', 'end', 'space-around', 'space-between', 'space-evenly'];
 const RowAlign$1 = ['top', 'middle', 'bottom'];
@@ -991,17 +1127,13 @@ const getPassProps$1 = {
   }
 };
 
-var script$1 = vue.defineComponent({
+var script$2 = vue.defineComponent({
   name: "ElRow",
   props: getPassProps$1,
-  provide() {
-    return {
-      rowContextKey: {
-        gutter: vue.computed(() => this.props.gutter)
-      }
-    };
-  },
   setup(props) {
+    vue.provide(rowContextKey, {
+      gutter: vue.computed(() => props.gutter)
+    });
     const style = vue.computed(() => {
       const styles = {};
       if (!props.gutter) {
@@ -1011,7 +1143,7 @@ var script$1 = vue.defineComponent({
       return styles;
     });
     const rowKls = vue.computed(() => {
-      const nb = utils.createNamespace("row");
+      const nb = createNamespace("row");
       return [nb.b(), nb.is(`justify-${props.justify}`, props.justify !== 'start'), nb.is(`align-${props.align}`, props.align !== 'top')];
     });
     //给组件col 提供gutter 属性值
@@ -1023,7 +1155,7 @@ var script$1 = vue.defineComponent({
   }
 });
 
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.props.tag), {
     class: vue.normalizeClass(_ctx.rowKls),
     style: vue.normalizeStyle(_ctx.style)
@@ -1033,16 +1165,16 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class", "style"]);
 }
 
-script$1.render = render$1;
-script$1.__file = "row/src/row.vue";
+script$2.render = render$2;
+script$2.__file = "row/src/row.vue";
 
-const withInstall$1 = com => {
+const withInstall$2 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElRow = withInstall$1(script$1);
+const ElRow = withInstall$2(script$2);
 
 const RowAlign = ['top', 'middle', 'bottom'];
 const getPassProps = {
@@ -1090,13 +1222,14 @@ const getPassProps = {
   }
 };
 
-var script = vue.defineComponent({
+var script$1 = vue.defineComponent({
   name: "ElCol",
   props: getPassProps,
   setup(props) {
-    // const { gutter } = inject<InjectionKeyRow>(rowContextKey) as InjectionKeyRow;
-    const gutter = vue.ref(20);
-    const nb = utils.createNamespace('col');
+    const {
+      gutter
+    } = vue.inject(rowContextKey);
+    const nb = createNamespace('col');
     const style = vue.computed(() => {
       const styles = {};
       if (gutter.value) {
@@ -1109,15 +1242,15 @@ var script = vue.defineComponent({
       const pos = ['span', 'offset', 'pull', 'push'];
       pos.forEach(prop => {
         const size = props[prop];
-        if (utils.isNumber(size)) {
+        if (isNumber(size)) {
           if (prop === 'span') classes.push(nb.b(`${props[prop]}`));else if (size.length > 0) classes.push(nb.b(`${prop}-${props[prop]}`));
         }
       });
       const sizes = ['xs', 'sm', 'md', 'lg', 'xl'];
       sizes.forEach(size => {
-        if (utils.isNumber(props[size])) {
+        if (isNumber(props[size])) {
           classes.push(nb.b(`${size}-${props[size]}`));
-        } else if (utils.isObject(props[size])) {
+        } else if (isObject(props[size])) {
           Object.entries(props[size]).forEach(([prop, sizeProp]) => {
             classes.push(prop !== 'span' ? nb.b(`${size}-${prop}-${sizeProp}`) : nb.b(`${size}-${sizeProp}`));
           });
@@ -1137,7 +1270,7 @@ var script = vue.defineComponent({
   }
 });
 
-function render(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   return vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.props.tag), {
     style: vue.normalizeStyle(_ctx.style),
     class: vue.normalizeClass(_ctx.colKls)
@@ -1147,8 +1280,66 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["style", "class"]);
 }
 
+script$1.render = render$1;
+script$1.__file = "col/src/col.vue";
+
+const withInstall$1 = com => {
+  com.install = function (app) {
+    app.component(com === null || com === void 0 ? void 0 : com.name, com);
+  };
+  return com;
+};
+const ElCol = withInstall$1(script$1);
+
+const sizes = ["large", "default", "small"];
+const types = ["primary", "danger", "warning", "info", "success"];
+const textProps = {
+  tag: {
+    type: String,
+    default: "span"
+  },
+  size: {
+    type: String,
+    validator: _val => sizes.includes(_val),
+    default: "default"
+  },
+  type: {
+    type: String,
+    validator: _val => types.includes(_val),
+    default: "info"
+  },
+  truncated: {
+    type: Boolean,
+    default: false
+  }
+};
+
+var script = vue.defineComponent({
+  name: "ElText",
+  props: textProps,
+  setup(props) {
+    const nb = createNamespace("text");
+    const classNames = vue.computed(() => {
+      return [nb.b(), nb.m(props.size), nb.m(props.type), nb.is("truncated", props.truncated), nb.be()];
+    });
+    return {
+      props,
+      classNames
+    };
+  }
+});
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.props.tag), {
+    class: vue.normalizeClass(_ctx.classNames)
+  }, {
+    default: vue.withCtx(() => [vue.renderSlot(_ctx.$slots, "default")]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]);
+}
+
 script.render = render;
-script.__file = "col/src/col.vue";
+script.__file = "text/src/text.vue";
 
 const withInstall = com => {
   com.install = function (app) {
@@ -1156,7 +1347,7 @@ const withInstall = com => {
   };
   return com;
 };
-const ElCol = withInstall(script);
+const ElText = withInstall(script);
 
 exports.Button = Button;
 exports.ElAutocomplete = ElAutocomplete;
@@ -1166,6 +1357,7 @@ exports.ElInput = ElInput;
 exports.ElRow = ElRow;
 exports.ElSpace = ElSpace;
 exports.ElStart = ElStart;
+exports.ElText = ElText;
 exports.ElTooltip = ElTooltip;
 exports.Links = Links;
 exports.ScrollBar = ScrollBar;

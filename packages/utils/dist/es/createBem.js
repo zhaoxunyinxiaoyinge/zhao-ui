@@ -4,84 +4,107 @@
  */
 /**
  *
- * @param prixname
+ * @param namespace
  * @param bolck
+ * @param blockSuffix
  * @param element
  * @param modifier
  * @returns
  */
-function _bem(prixname, bolck, element, modifier) {
-    if (bolck) {
-        prixname += "-" + bolck;
+const namespace = 'el';
+function _bem(namespace, bolck, blockSuffix, element, modifier) {
+    let cls = `${namespace}-${bolck}`;
+    if (blockSuffix) {
+        cls += `-${blockSuffix}`;
     }
     if (element) {
-        prixname += "__" + element;
+        cls += `__${element}`;
     }
     if (modifier) {
-        prixname += "__" + modifier;
+        cls += `--${modifier}`;
     }
-    return prixname;
+    return cls;
 }
 /**
  *
- * @param preixNname
+ * @param block
  * @returns
  */
-function createBEM(preixNname) {
+function createBEM(block) {
     /**
      *
      * @param bolck
      * @returns
      */
-    const b = (bolck = "") => _bem(preixNname, bolck, "", "");
+    const b = (blockSuffix = "") => _bem(namespace, block, blockSuffix, "", "");
     /**
      *
      * @param element
      * @returns
      */
-    const e = (element) => element ? _bem(preixNname, "", element, "") : "";
+    const e = (element) => element ? _bem(namespace, block, "", element, "") : "";
     /**
      *
      * @param modifier
      * @returns
      */
-    const m = (modifier = "") => modifier ? _bem(preixNname, "", "", modifier) : "";
+    const m = (modifier = "") => modifier ? _bem(namespace, block, "", "", modifier) : "";
     /**
      *
      * @param element
      * @param modifier
      * @returns
      */
-    const em = (element = "", modifier = "") => element && modifier ? _bem(preixNname, "", element, modifier) : "";
+    const em = (element = "", modifier = "") => element && modifier ? _bem(namespace, block, "", element, modifier) : "";
+    /**
+     *
+     * @param blockSuffix
+     * @param element
+     * @returns
+     */
+    const be = (blockSuffix = "", element = "") => blockSuffix && element ? _bem(namespace, block, blockSuffix, element, "") : "";
+    /**
+     *
+     * @param blockSuffix
+     * @param modifier
+     * @returns
+     */
+    const bm = (blockSuffix = "", modifier = "") => blockSuffix && modifier ? _bem(namespace, block, blockSuffix, "", modifier) : "";
     /**
      *
      * @param bolck
      * @param element
-     * @returns
-     */
-    const be = (bolck = "", element = "") => bolck && element ? _bem(preixNname, bolck, element, "") : "";
-    /**
-     *
-     * @param bolck
      * @param modifier
      * @returns
      */
-    const bm = (bolck = "", modifier = "") => bolck && modifier ? _bem(preixNname, bolck, "", modifier) : "";
+    const bem = (blockSuffix = "", element = "", modifier = "") => block && element && modifier ? _bem(namespace, block, blockSuffix, element, modifier) : "";
     /**
-     *
-     * @param bolck
-     * @param element
-     * @param modifier
-     * @returns
-     */
-    const bem = (bolck = "", element = "", modifier = "") => bolck && element && modifier ? _bem(preixNname, bolck, element, modifier) : "";
-    /**
-     *
      * @param name
      * @param state
      * @returns
      */
-    const is = (name, state) => state ? `is-${name}` : "";
+    const is = (name, state) => state && name ? `is-${name}` : "";
+    const cssVar = (object) => {
+        const styles = {};
+        for (const key in object) {
+            if (object[key]) {
+                styles[`--${namespace}-${key}`] = object[key];
+            }
+        }
+        return styles;
+    };
+    // with block
+    const cssVarBlock = (object) => {
+        const styles = {};
+        for (const key in object) {
+            if (object[key]) {
+                styles[`--${namespace}-${block}-${key}`] = object[key];
+            }
+        }
+        return styles;
+    };
+    const cssVarName = (name) => `--${namespace}-${name}`;
+    const cssVarBlockName = (name) => `--${namespace}-${block}-${name}`;
     return {
         b,
         e,
@@ -90,7 +113,11 @@ function createBEM(preixNname) {
         be,
         bm,
         bem,
-        is
+        is,
+        cssVar,
+        cssVarBlock,
+        cssVarName,
+        cssVarBlockName
     };
 }
 /**
@@ -98,8 +125,7 @@ function createBEM(preixNname) {
  * @param name
  * @returns 创建命名空间
  */
-function createNamespace(name) {
-    let prixname = `zhao-${name}`;
-    return createBEM(prixname);
+function createNamespace(block) {
+    return createBEM(block);
 }
 export { createNamespace };

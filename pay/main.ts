@@ -1,6 +1,6 @@
 import {createApp} from "vue";
 import App from "./App.vue"
-import {ZIcon,Links,Button,ElInput,ElRow,ElCol} from "@zhao/components";
+import {ZIcon,Links,Button,ElInput,ElRow,ElCol,ElSpace} from "@zhao/components";
 
 import "./../packages/them-chlak/dist/css/index.css"
 let app=createApp(
@@ -12,4 +12,5 @@ app.use(Links);
 app.use(ElInput);
 app.use(ElRow);
 app.use(ElCol);
+app.use(ElSpace);
 app.mount("#app");

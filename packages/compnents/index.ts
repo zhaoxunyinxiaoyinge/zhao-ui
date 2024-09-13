@@ -10,6 +10,7 @@ import ElTooltip from "./tooltip/index";
 import ElInput from "./input/index";
 import ElRow from "./row/index";
 import ElCol  from "./col/index";
+import ElText from "./text/index";
 
 export  {
   ElAutocomplete,
@@ -23,5 +24,6 @@ export  {
   ElTooltip,
   ElInput,
   ElRow,
-  ElCol
+  ElCol,
+  ElText
 }

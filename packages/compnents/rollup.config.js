@@ -25,7 +25,7 @@ function createBuild(format, output) {
   output.exports = 'named';
   return {
     input: path.resolve("../../", 'packages/compnents/index.ts'),
-    external: ['vue', "@zhao/utils", "@zhao/them-chlak"],
+    external: ['vue'],
     output,
     cache: false,
     plugins: [

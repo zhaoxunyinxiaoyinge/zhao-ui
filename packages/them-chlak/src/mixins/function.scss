@@ -1,0 +1,93 @@
+@use "config";
+
+@function bem($block, $element: '', $modifier: '') {
+  $name: config.$namespace + config.$common-separator + $block;
+
+  @if $element != '' {
+    $name: $name + config.$element-separator + $element;
+  }
+
+  @if $modifier != '' {
+    $name: $name + config.$modifier-separator + $modifier;
+  }
+
+  // @debug $name;
+  @return $name;
+}
+
+//获取指定变量的值，且有默认值
+@function getCssVarWithDefault($args, $default) {
+  @return var(#{joinVarName($args)}, #{$default});
+}
+
+//获取指定变量的值，且没有默认值
+@function getCssVar($args...) {
+  @return var(#{joinVarName($args)});
+}
+
+//返回拼接的类名
+@function getCssVarName($args...) {
+  @return joinVarName($args);
+}
+
+//对名称进行拼接
+@function joinVarName($list) {
+  $name: '--' + config.$namespace;
+  @each $item in $list {
+    @if $item != '' {
+      $name: $name + '-' + $item;
+    }
+  }
+  @return $name;
+}
+
+//查询方法地址：https://wikimass.com/sass/str-slice
+
+@function selectorToString($selector) {
+  $selector: inspect($selector);
+  $selector: str-slice($selector, 2, -2);
+  @return $selector;
+}
+
+
+// 查看在字符选择器中是否包含modifier的连接符
+@function containsModifier($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, config.$modifier-separator) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+//判断是否在这选择器中是否包含is-
+
+@function containWhenFlag($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, '.' + config.$state-prefix) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+
+//当前选择其字符串中是否包含“：”
+@function containPseudoClass($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, ':') {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+
+//当前选择其字符串中是否包含“：”判断是否在这选择器中是否包含is-查看在字符选择器中是否包含modifier的连接符
+@function hitAllSpecialNestRule($selector) {
+  @return containsModifier($selector) or containWhenFlag($selector) or
+    containPseudoClass($selector);
+}

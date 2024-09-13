@@ -3,88 +3,117 @@
  * js 生成BEM 规范 (zhao__button--success);
  * author zhaoxunyin
  */
-
 /**
  * 
- * @param prixname 
+ * @param namespace 
  * @param bolck 
+ * @param blockSuffix
  * @param element 
  * @param modifier 
  * @returns 
  */
-function _bem(prixname: string, bolck: string, element: string, modifier: string) {
-    if (bolck) {
-        prixname += "-" + bolck;
-    }
-    if (element) {
-        prixname += "__" + element;
-    }
-    if (modifier) {
-        prixname += "__" + modifier;
-    }
-    return prixname;
+const namespace:string='el';
+
+function _bem(namespace: string, bolck: string,blockSuffix:string, element: string, modifier: string) {
+    let cls=`${namespace}-${bolck}`;
+     if (blockSuffix) {
+    cls += `-${blockSuffix}`
+  }
+  if (element) {
+    cls += `__${element}`
+  }
+  if (modifier) {
+    cls += `--${modifier}`
+  }
+  return cls
 }
 
 /**
  * 
- * @param preixNname 
+ * @param block 
  * @returns 
  */
-function createBEM(preixNname: string) {
+function createBEM(block: string) {
     /**
      * 
      * @param bolck 
      * @returns 
      */
-    const b = (bolck: string = "") => _bem(preixNname, bolck, "", "");
+    const b = (blockSuffix: string = "") => _bem(namespace,block,blockSuffix,"","");
     /**
      * 
      * @param element 
      * @returns 
      */
-    const e = (element: string) => element ? _bem(preixNname, "", element, "") : "";
+    const e = (element: string) => element ? _bem(namespace, block,"", element, "") : "";
     /**
      * 
      * @param modifier 
      * @returns 
      */
-    const m = (modifier: string = "") => modifier ? _bem(preixNname, "", "", modifier) : "";
+    const m = (modifier: string = "") => modifier ? _bem(namespace, block,"", "", modifier) : "";
     /**
      * 
      * @param element 
      * @param modifier 
      * @returns 
      */
-    const em = (element: string = "", modifier: string = "") => element && modifier ? _bem(preixNname, "", element, modifier) : "";
+    const em = (element: string = "", modifier: string = "") => element && modifier ? _bem(namespace, block,"", element, modifier) : "";
+    /**
+     * 
+     * @param blockSuffix 
+     * @param element 
+     * @returns 
+     */
+    const be = (blockSuffix: string = "", element: string = "") => blockSuffix && element ? _bem(namespace,block,blockSuffix,element,"") : "";
+    /**
+     * 
+     * @param blockSuffix 
+     * @param modifier 
+     * @returns 
+     */
+    const bm = (blockSuffix: string = "", modifier: string = "") => blockSuffix && modifier ? _bem(namespace,block, blockSuffix, "", modifier) : "";
     /**
      * 
      * @param bolck 
      * @param element 
-     * @returns 
-     */
-    const be = (bolck: string = "", element: string = "") => bolck && element ? _bem(preixNname, bolck, element, "") : "";
-    /**
-     * 
-     * @param bolck 
      * @param modifier 
      * @returns 
      */
-    const bm = (bolck: string = "", modifier: string = "") => bolck && modifier ? _bem(preixNname, bolck, "", modifier) : "";
+    const bem = (blockSuffix: string = "", element: string = "", modifier: string = "") => block && element && modifier ? _bem(namespace, block,blockSuffix,element, modifier) : "";
     /**
-     * 
-     * @param bolck 
-     * @param element 
-     * @param modifier 
-     * @returns 
-     */
-    const bem = (bolck: string = "", element: string = "", modifier: string = "") => bolck && element && modifier ? _bem(preixNname, bolck, element, modifier) : "";
-    /**
-     * 
      * @param name 
      * @param state 
      * @returns 
      */
-    const is = (name: string, state: boolean) => state ? `is-${name}` : "";
+    const is = (name: string, state: boolean) => state&&name ? `is-${name}` : "";
+
+
+    const cssVar = (object: Record<string, string>) => {
+        const styles: Record<string, string> = {}
+        for (const key in object) {
+          if (object[key]) {
+            styles[`--${namespace}-${key}`] = object[key]
+          }
+        }
+        return styles
+      }
+      // with block
+      const cssVarBlock = (object: Record<string, string>) => {
+        const styles: Record<string, string> = {}
+        for (const key in object) {
+          if (object[key]) {
+            styles[`--${namespace}-${block}-${key}`] = object[key]
+          }
+        }
+        return styles
+      }
+    
+      const cssVarName = (name: string) => `--${namespace}-${name}`
+      const cssVarBlockName = (name: string) =>
+        `--${namespace}-${block}-${name}`
+
+
 
     return {
         b,
@@ -94,7 +123,11 @@ function createBEM(preixNname: string) {
         be,
         bm,
         bem,
-        is
+        is,
+        cssVar,
+        cssVarBlock,
+        cssVarName,
+        cssVarBlockName
     }
 }
 
@@ -103,9 +136,8 @@ function createBEM(preixNname: string) {
  * @param name 
  * @returns 创建命名空间
  */
-function createNamespace(name: string) {
-    let prixname = `el-${name}`;
-    return createBEM(prixname);
+function createNamespace(block: string) {
+    return createBEM(block);
 }
 
 export {

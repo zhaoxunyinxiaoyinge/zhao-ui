@@ -28,10 +28,6 @@ describe('Button.vue', () => {
 
       const wrappeL = mount(() => <Button size="large"  />)
       expect(wrappeL.classes()).toContain('el-button--large');
-
-
-      
-
     })
 
 })

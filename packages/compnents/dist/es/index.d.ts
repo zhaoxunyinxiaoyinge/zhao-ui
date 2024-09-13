@@ -10,4 +10,5 @@ import ElTooltip from "./tooltip/index";
 import ElInput from "./input/index";
 import ElRow from "./row/index";
 import ElCol from "./col/index";
-export { ElAutocomplete, Button, ElCard, ZIcon, Links, ScrollBar, ElSpace, ElStart, ElTooltip, ElInput, ElRow, ElCol };
+import ElText from "./text/index";
+export { ElAutocomplete, Button, ElCard, ZIcon, Links, ScrollBar, ElSpace, ElStart, ElTooltip, ElInput, ElRow, ElCol, ElText };
