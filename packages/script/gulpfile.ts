@@ -7,11 +7,11 @@ const copypackage = async () => {
 };
 
 const copyComponentEs = async () => {
-  return src(`./../compnents/dist/es`).pipe(dest(`${projectPath}/dist/zhao-ui/es/components`));
+  return src(`./../compnents/dist/es/**`).pipe(dest(`${projectPath}/dist/zhao-ui/es/components`));
 };
 
 const copyComponentLib = async () => {
-  return src(`./../compnents/dist/es`).pipe(dest(`${projectPath}/dist/zhao-ui/lib/components`));
+  return src(`./../compnents/dist/lib/**`).pipe(dest(`${projectPath}/dist/zhao-ui/lib/components`));
 };
 //发布任务
 const publish = async () => {
