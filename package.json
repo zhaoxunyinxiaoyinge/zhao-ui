@@ -1,6 +1,6 @@
 {
   "name": "zha-ui",
-  "version": "1.0.55",
+  "version": "1.0.56",
   "description": "vue组件库最新vue3开发",
   "main": "./dist/zhao-ui/es/index.js",
   "types": "./types/env.d.ts",
