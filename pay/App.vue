@@ -19,9 +19,7 @@
     </div>
 </template>
 <script  setup lang="ts">
-    let withTaskname = <T>(name: string, fn:T) => Object.assign(fn as Function, { displayName: name });
-    const cleanDist=withTaskname("clean", async() => {console.log(2)});
-    console.log(cleanDist.displayName)
+
 </script>
 <style scoped>
 .flex {

@@ -27,7 +27,7 @@ const publish = async () => {
   
   console.log(__dirname,5555)
   //在dist下执行发布命令
-  await run('pnpm publish', path.resolve(process.cwd(),"dist"));
+  // await run('pnpm publish', path.resolve(process.cwd(),"dist"));
   // run('pnpm publish')
 }
 

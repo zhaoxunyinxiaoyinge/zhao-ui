@@ -7,6 +7,7 @@ export declare const getPassProps: {
     };
     type: {
         type: StringConstructor;
+        default: string;
         require: boolean;
     };
     icon: {

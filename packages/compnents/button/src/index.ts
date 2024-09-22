@@ -8,6 +8,7 @@ export const getPassProps = {
     },
     type: {
         type: String,
+        default:'default',
         require:false
     },
     icon:{

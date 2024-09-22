@@ -13,7 +13,6 @@
     cursor: pointer;
     &[disabled] {
         opacity: .5;
-
         &:hover {
             cursor: not-allowed;
         }
@@ -35,16 +34,27 @@
     &--large {
         padding: 10px 20px;
         font-size: 16px;
+        border-radius: 6px;
+    }
+    &--small {
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 4px;
     }
 
     &--default {
         padding: 10px 20px;
         font-size: 14px;
-    }
+        &:not([disabled]) {
+            &:hover {
+                background-color: fade-out(#d4d7de, .4);
+                color: #fff
+            }
 
-    &--small {
-        padding: 4px 8px;
-        font-size: 12px
+            &:active {
+                background-color: fade-out(#d4d7de, .1);
+            }
+        }
     }
 
     &--primary {

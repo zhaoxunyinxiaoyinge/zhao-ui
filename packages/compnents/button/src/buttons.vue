@@ -1,10 +1,10 @@
 <template>
     <button ref="_ref" :disabled="isDisabled" class="el-button" :class="[props.size == 'large' ? 'el-button--large' : props.size == 'default' ? 'el-button--default' : 'el-button--small', props.type == 'primary' ? 'el-button--primary' : props.type == 'danger' ? 'el-button--danger' : props.type == 'warning' ? 'el-button--warning' : props.type == 'info' ? 'el-button--info' :
-            props.type == 'success' ? 'el-button--success' : '',
+        props.type == 'success' ? 'el-button--success' : 'el-button--default', 
         isplain ? 'is-plain' : '',
-        isCirle ? 'is-cirle' : '',
-        isRound ? 'is-round' : ''
-        ]">
+    isCirle ? 'is-cirle' : '',
+    isRound ? 'is-round' : ''
+    ]">
         <z-icon :icon="props.icon" v-if="props.icon"></z-icon>
         <Loading v-if="isLoading && !props.icon"></Loading>
         <slot></slot>
@@ -50,7 +50,7 @@ export default defineComponent({
             size: _size,
             type: _type,
             disabeld: _disabled
-            
+
         }
     }
 })

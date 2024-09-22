@@ -11,4 +11,6 @@ import ElInput from "./input/index";
 import ElRow from "./row/index";
 import ElCol from "./col/index";
 import ElText from "./text/index";
+import ZhaUi from "./index-global";
 export { ElAutocomplete, Button, ElCard, ZIcon, Links, ScrollBar, ElSpace, ElStart, ElTooltip, ElInput, ElRow, ElCol, ElText };
+export default ZhaUi;

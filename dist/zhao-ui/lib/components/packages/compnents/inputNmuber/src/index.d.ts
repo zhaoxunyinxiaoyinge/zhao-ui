@@ -22,7 +22,7 @@ declare const inputNumberProps: {
     };
     size: {
         type: StringConstructor;
-        default: PropType<"small" | "default" | "large">;
+        default: PropType<"default" | "large" | "small">;
     };
     readonly: {
         type: BooleanConstructor;

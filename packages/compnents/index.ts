@@ -11,6 +11,7 @@ import ElInput from "./input/index";
 import ElRow from "./row/index";
 import ElCol  from "./col/index";
 import ElText from "./text/index";
+import ZhaUi  from "./index-global";
 
 export  {
   ElAutocomplete,
@@ -27,3 +28,5 @@ export  {
   ElCol,
   ElText
 }
+
+export default ZhaUi;

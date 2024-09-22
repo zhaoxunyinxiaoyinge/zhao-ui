@@ -13,13 +13,13 @@ function render$c(_ctx, _cache, $props, $setup, $data, $options) {
 script$d.render = render$c;
 script$d.__file = "autocomplete/src/index.vue";
 
-const withInstall$d = com => {
+const withInstall$e = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElAutocomplete = withInstall$d(script$d);
+const ElAutocomplete = withInstall$e(script$d);
 
 const getPassProps$5 = {
   size: {
@@ -29,6 +29,7 @@ const getPassProps$5 = {
   },
   type: {
     type: String,
+    default: 'default',
     require: false
   },
   icon: {
@@ -62,13 +63,13 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
 script$c.render = render$b;
 script$c.__file = "icon/src/icon.vue";
 
-const withInstall$c = com => {
+const withInstall$d = com => {
   com.install = function (app) {
     app.component(com.name, com);
   };
   return com;
 };
-const ZIcon$1 = withInstall$c(script$c);
+const ZIcon$1 = withInstall$d(script$c);
 
 function styleInject(css, ref) {
   if (ref === void 0) ref = {};
@@ -162,7 +163,7 @@ function render$a(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("button", {
     ref: "_ref",
     disabled: _ctx.isDisabled,
-    class: normalizeClass(["el-button", [_ctx.props.size == 'large' ? 'el-button--large' : _ctx.props.size == 'default' ? 'el-button--default' : 'el-button--small', _ctx.props.type == 'primary' ? 'el-button--primary' : _ctx.props.type == 'danger' ? 'el-button--danger' : _ctx.props.type == 'warning' ? 'el-button--warning' : _ctx.props.type == 'info' ? 'el-button--info' : _ctx.props.type == 'success' ? 'el-button--success' : '', _ctx.isplain ? 'is-plain' : '', _ctx.isCirle ? 'is-cirle' : '', _ctx.isRound ? 'is-round' : '']])
+    class: normalizeClass(["el-button", [_ctx.props.size == 'large' ? 'el-button--large' : _ctx.props.size == 'default' ? 'el-button--default' : 'el-button--small', _ctx.props.type == 'primary' ? 'el-button--primary' : _ctx.props.type == 'danger' ? 'el-button--danger' : _ctx.props.type == 'warning' ? 'el-button--warning' : _ctx.props.type == 'info' ? 'el-button--info' : _ctx.props.type == 'success' ? 'el-button--success' : 'el-button--default', _ctx.isplain ? 'is-plain' : '', _ctx.isCirle ? 'is-cirle' : '', _ctx.isRound ? 'is-round' : '']])
   }, [_ctx.props.icon ? (openBlock(), createBlock(_component_z_icon, {
     key: 0,
     icon: _ctx.props.icon
@@ -174,13 +175,13 @@ function render$a(_ctx, _cache, $props, $setup, $data, $options) {
 script$a.render = render$a;
 script$a.__file = "button/src/buttons.vue";
 
-const withInstall$b = com => {
+const withInstall$c = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const Button = withInstall$b(script$a);
+const Button = withInstall$c(script$a);
 
 var shadow;
 (function (shadow) {
@@ -242,13 +243,13 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
 script$9.render = render$9;
 script$9.__file = "card/src/index.vue";
 
-const withInstall$a = com => {
+const withInstall$b = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElCard = withInstall$a(script$9);
+const ElCard = withInstall$b(script$9);
 
 const getPassProps$3 = {
   type: {
@@ -305,13 +306,13 @@ function render$8(_ctx, _cache, $props, $setup, $data, $options) {
 script$8.render = render$8;
 script$8.__file = "link/src/link.vue";
 
-const withInstall$9 = com => {
+const withInstall$a = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const Links = withInstall$9(script$8);
+const Links = withInstall$a(script$8);
 
 const getPassProps$2 = {
   height: {
@@ -416,13 +417,13 @@ function render$7(_ctx, _cache, $props, $setup, $data, $options) {
 script$7.render = render$7;
 script$7.__file = "scrollBar/src/index.vue";
 
-const withInstall$8 = com => {
+const withInstall$9 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ScrollBar = withInstall$8(script$7);
+const ScrollBar = withInstall$9(script$7);
 
 const isAarray = arr => {
   return Array.isArray(arr);
@@ -704,13 +705,13 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
 script$6.render = render$6;
 script$6.__file = "space/src/index.vue";
 
-const withInstall$7 = com => {
+const withInstall$8 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElSpace = withInstall$7(script$6);
+const ElSpace = withInstall$8(script$6);
 
 var script$5 = defineComponent({
   name: 'ElStart',
@@ -809,13 +810,13 @@ script$5.render = render$5;
 script$5.__scopeId = "data-v-534fa15c";
 script$5.__file = "start/src/index.vue";
 
-const withInstall$6 = com => {
+const withInstall$7 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElStart = withInstall$6(script$5);
+const ElStart = withInstall$7(script$5);
 
 var script$4 = defineComponent({
   setup() {
@@ -830,13 +831,13 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
 script$4.render = render$4;
 script$4.__file = "tooltip/src/index.vue";
 
-const withInstall$5 = com => {
+const withInstall$6 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElTooltip = withInstall$5(script$4);
+const ElTooltip = withInstall$6(script$4);
 
 const inputProps = {
   type: {
@@ -900,13 +901,13 @@ const inputProps = {
   }
 };
 
-const withInstall$4 = com => {
+const withInstall$5 = com => {
   com.install = function (app) {
     app.component(com.name, com);
   };
   return com;
 };
-const ZIcon = withInstall$4(script$c);
+const ZIcon = withInstall$5(script$c);
 
 var sizes$1;
 (function (sizes) {
@@ -1081,13 +1082,13 @@ function render$3(_ctx, _cache, $props, $setup, $data, $options) {
 script$3.render = render$3;
 script$3.__file = "input/src/index.vue";
 
-const withInstall$3 = com => {
+const withInstall$4 = com => {
   com.install = function (app) {
     app.component(com.name, com);
   };
   return com;
 };
-const ElInput = withInstall$3(script$3);
+const ElInput = withInstall$4(script$3);
 
 const RowJustify = ['start', 'center', 'end', 'space-around', 'space-between', 'space-evenly'];
 const RowAlign$1 = ['top', 'middle', 'bottom'];
@@ -1166,13 +1167,13 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
 script$2.render = render$2;
 script$2.__file = "row/src/row.vue";
 
-const withInstall$2 = com => {
+const withInstall$3 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElRow = withInstall$2(script$2);
+const ElRow = withInstall$3(script$2);
 
 const RowAlign = ['top', 'middle', 'bottom'];
 const getPassProps = {
@@ -1281,13 +1282,13 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
 script$1.render = render$1;
 script$1.__file = "col/src/col.vue";
 
-const withInstall$1 = com => {
+const withInstall$2 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElCol = withInstall$1(script$1);
+const ElCol = withInstall$2(script$1);
 
 const sizes = ["large", "default", "small"];
 const types = ["primary", "danger", "warning", "info", "success"];
@@ -1339,13 +1340,22 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 script.render = render;
 script.__file = "text/src/text.vue";
 
-const withInstall = com => {
+const withInstall$1 = com => {
   com.install = function (app) {
     app.component(com === null || com === void 0 ? void 0 : com.name, com);
   };
   return com;
 };
-const ElText = withInstall(script);
+const ElText = withInstall$1(script);
 
-export { Button, ElAutocomplete, ElCard, ElCol, ElInput, ElRow, ElSpace, ElStart, ElText, ElTooltip, Links, ScrollBar, ZIcon$1 as ZIcon };
+const withInstall = com => {
+  return app => {
+    com.forEach(item => {
+      app.component(item === null || item === void 0 ? void 0 : item.name, item);
+    });
+  };
+};
+const ZhaUi = withInstall([script$a, script$9, script$c, script$3, script$8, script$5]);
+
+export { Button, ElAutocomplete, ElCard, ElCol, ElInput, ElRow, ElSpace, ElStart, ElText, ElTooltip, Links, ScrollBar, ZIcon$1 as ZIcon, ZhaUi as default };
 //# sourceMappingURL=zhao-ui.esm-bundler.js.map
