@@ -1,23 +1,14 @@
 import Start from "./src/index.vue";
-import type { App, Plugin, Component } from "vue";
-
-type SFCwidthInstall<T> = T & Plugin;
-
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
+import type { App, Plugin } from "vue";
+export type SFCWithInstall<T> = T & Plugin;
+const ZStart=Start as SFCWithInstall<typeof Start>
+ZStart.install =  (app:App)=>{
+        app.component("ZStart", Start);
     }
-    return com as SFCwidthInstall<T>
-}
 
-const ElStart = withInstall(Start);
+export type StartInstance = InstanceType<typeof Start>;
+export type { StartProps } from "./src/types";
 export {
-    ElStart
+    ZStart
 }
-export default ElStart;
-
-declare module "vue" {
-    export interface GlobalComponents {
-        ZElStart:typeof ElStart
-    }
-}
+export default ZStart;

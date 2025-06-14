@@ -1,23 +1,14 @@
 import Link from "./src/link.vue";
-import type { App, Plugin, Component } from "vue";
+import type { App, Plugin } from "vue";
 
-type SFCwidthInstall<T> = T & Plugin;
 
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
-}
+export type LinkInstance = InstanceType<typeof Link>;
+export type SFCWithInstall<T>=T&Plugin
+const ZLink =Link as SFCWithInstall<typeof Link>
+ZLink.install =(app:App)=> {
+    app.component("ZLink", Link); 
+};  
+export type { LinkProps } from "./src/types";
+export {ZLink}
+export default ZLink;
 
-const Links = withInstall(Link);
-export {
-    Links
-}
-export default Links;
-
-declare module "vue" {
-    export interface GlobalComponents {
-        ZLinks:typeof Links
-    }
-}

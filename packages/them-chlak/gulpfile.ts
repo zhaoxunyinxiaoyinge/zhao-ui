@@ -20,7 +20,7 @@ const copy = () => {
 }
 
 const copyStyle = () => {
-    return src(path.resolve(__dirname, "./dist/**")).pipe(dest(projectPath + "/dist/zhao-ui/them-chalk"));
+    return src(path.resolve(__dirname, "./dist/**")).pipe(dest(projectPath + "/dist/them-chalk"));
 }
 
 export default series(

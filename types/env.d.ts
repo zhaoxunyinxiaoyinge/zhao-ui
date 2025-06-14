@@ -1,9 +1,9 @@
-/// <reference types="vite/client" />
-
+/// <reference types="vue" />
 declare module '*.vue' {
-    import { DefineComponent } from 'vue'
-    const component: DefineComponent<{}, {}, any>
-    export default component
-  }
-declare module "zha-ui" {
+  import { DefineComponent } from 'vue'
+  const component: DefineComponent<{}, {}, any>
+  export default component
 }
+
+
+

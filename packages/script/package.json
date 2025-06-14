@@ -1,8 +1,8 @@
 {
   "name": "zha-ui",
   "version": "1.0.9",
-  "main": "./lib/components/index.cjs",
-  "module": "./es/components/index.js",
+  "main": "lib/index.cjs",
+  "module": "es/zhao-ui.esm-bundler.js",
   "files": [
     "dist"
   ],
@@ -13,7 +13,7 @@
   "author": "zhaoxunyin",
   "license": "MIT",
   "description": "前端开发测试ui组件库",
-  "typings": "lib/index.d.ts",
+  "typings": "dist/types/packages/compnents/index.d.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

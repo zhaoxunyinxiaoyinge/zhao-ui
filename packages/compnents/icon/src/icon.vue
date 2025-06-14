@@ -4,8 +4,8 @@
     </i>
 </template>
 <script lang="ts">
-import {defineComponent,computed} from  "vue";
-import  {getPassProps} from "./icon"
+import {defineComponent} from  "vue";
+import  {getPassProps} from "./types"
     export default defineComponent({
         name:"ZIcon",
         props:getPassProps,

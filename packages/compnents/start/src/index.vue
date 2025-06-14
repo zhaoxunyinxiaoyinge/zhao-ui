@@ -1,27 +1,11 @@
 <script  lang="ts">
 import { ref, onMounted, defineComponent } from 'vue'
+import {startProps} from "./types"
 
 export default defineComponent({
   name: 'ElStart',
   emits: ['checked'],
-  props: {
-    maxValue: {
-      type: Number,
-      default: 5
-    },
-    value: {
-      type: Number,
-      default: 4
-    },
-    activeColor: {
-      type: String,
-      default: 'gold'
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    }
-  },
+  props: startProps,
   setup(props, { emit }) {
     const mytempscore = ref<number>(0)
     const myscore = ref<number>(0)

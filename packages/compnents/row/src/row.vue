@@ -1,6 +1,6 @@
 <script lang="ts">
 import { CSSProperties, computed, defineComponent, provide } from "vue";
-import { getPassProps } from "./row";
+import { getPassProps } from "./types";
 import { createNamespace, rowContextKey} from "@zhao/utils";
 
 export default defineComponent({

@@ -1,6 +1,6 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-import {textProps} from "./index";
+import {textProps} from "./types";
 import {createNamespace} from "@zhao/utils";
 
 export default defineComponent({

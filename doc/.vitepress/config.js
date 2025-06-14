@@ -1,20 +1,23 @@
 module.exports = {
     title: "zhao-ui",
+    lastUpdated: true,
+    titleTemplate: false,
     lang: 'zh-CN',
     description: 'Just playing around.',
+    head: [['link', { rel: 'icon', href: '/fav.ico' }],["link",{ rel: 'preconnect', href: 'https://fonts.googleapis.com' }]],
+    srcDir:".",
     markdown: {
         theme: 'material-palenight',
         lineNumbers: true
       },
-    themeConfig: {
+      themeConfig: {
+        outlineTitle:"页面导航",
         logo:"/timger.png",
-        lastUpdated: '最后更新时间',
         docsDir: 'docs',
         editLink: {
             pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
             text: 'Edit this page on GitHub'
         },
-        lastUpdatedText: 'Updated Date',
         algolia: {
             apiKey: 'your_api_key',
             indexName: 'index_name'
@@ -35,7 +38,7 @@ module.exports = {
             text: "首页",
             link: "/",
         }
-    ],
+        ],
 
         sidebar:
             {
@@ -63,10 +66,10 @@ module.exports = {
                             { text: "link 链接", link: '/component/link' },
                             { text: "scrollbar 滚动", link: '/component/scrollbar' },
                             { text: "card 卡片", link: '/component/card' },
-                            { text: "space 区域块", link: '/component/space' },
                             {text:"layout布局",link:"/component/layout"},
                             {text:"text组件",link:"/component/text"},
-                        ]
+                 
+                        ] 
                     },
                     {
                         text:"表单组件",
@@ -83,7 +86,7 @@ module.exports = {
 
         ,
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+            { icon: 'github', link: 'https://github.com/zhaoxunyinxiaoyinge/zhao-ui.git' }],
 
         footer: {
             message: 'Released under the MIT License.',

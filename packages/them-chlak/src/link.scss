@@ -4,14 +4,23 @@
     font-weight: thin;
     margin: 10px;
     border-bottom: 1px solid transparent;
+
     &.is-disabled {
         cursor: not-allowed;
     }
 
-    &.is-underline:hover {
-        box-sizing: border-box;
-        border-bottom: 1px solid #000;
+    &--default {
+        color: #333;
+
+        &.is-underline:hover {
+            box-sizing: border-box;
+            border-bottom: 1px solid #000;
+        }
+        &.is-disabled {
+            color: fade-out(#333, .5);
+        }
     }
+
 
     &--primary {
         color: #409eff;

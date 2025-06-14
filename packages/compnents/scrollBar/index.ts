@@ -1,23 +1,15 @@
-import ScrollBars from "./src/index.vue";
-import type { App, Plugin, Component } from "vue";
-
-type SFCwidthInstall<T> = T & Plugin;
-
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
-}
-
-const ScrollBar = withInstall(ScrollBars);
+import ScrollBar from "./src/index.vue";
+import type { App, Plugin } from "vue";
+export type SFCWithInstall<T> = T & Plugin;
+const ZScrollBarBar=ScrollBar as SFCWithInstall<typeof ScrollBar>
+ZScrollBarBar.install =(app:App)=> {
+    app.component("ZScrollBar", ScrollBar);
+};
+export type ScrollBarInstance = InstanceType<typeof ScrollBar>;
+export type { ScrollbarProps} from "./src/types";
 export {
-    ScrollBar
+    ZScrollBarBar
 }
-export default ScrollBar;
+export default ZScrollBarBar;
 
-declare module "vue" {
-    export interface GlobalComponents {
-        ZScrollBar: typeof ScrollBar
-    }
-}
+

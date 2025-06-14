@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { defineComponent, computed, CSSProperties, StyleValue } from "vue";
-import { cardProps } from "./index"
+import { cardProps } from "./types"
 export default defineComponent({
     name: "ElCard",
     props: cardProps,

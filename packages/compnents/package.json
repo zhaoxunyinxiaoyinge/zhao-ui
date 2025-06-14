@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "基于vue3测试进行开发的组件库",
   "module": "dist/es/zhao-ui.esm-bundler.js",
-  "main":"dist/lib/zhao-ui.cjs.js",
-  "types": "dist/es/index.d.ts",
+  "main":"dist/lib/index.cjs",
+  "types": "dist/compnents/index.d.ts",
   "buildoption":{
     "name":"zhao-ui",
     "format":[

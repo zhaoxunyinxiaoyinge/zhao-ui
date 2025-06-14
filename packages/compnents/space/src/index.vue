@@ -8,7 +8,7 @@
 <script lang="ts">
 import { isAarray, isNumber } from "@zhao/utils";
 import { defineComponent, computed, CSSProperties, StyleValue, ref, watchEffect } from "vue";
-import { spaceProps } from "./index"
+import { spaceProps } from "./types"
 import { renderSlot } from "vue";
 
 const SIZE_MAP = {

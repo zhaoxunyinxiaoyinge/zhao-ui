@@ -1,24 +1,15 @@
 import col from "./src/col.vue";
-import type { App, Plugin, Component } from "vue";
+import type { App, Plugin } from "vue";
+export type SFCWithInstall<T> = T & Plugin;
+const ZCol=col as SFCWithInstall<typeof col>
+ ZCol.install=(app:App)=>{
+    app.component("ZCol",ZCol)
+ }
 
-export type SFCwidthInstall<T> = T & Plugin;
-
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
-}
-
-const ElCol = withInstall(col);
+export type {ColInstance, ColProps} from "./src/types";
 
 export {
-  ElCol
+  ZCol
 }
-export default ElCol;
 
-declare module "vue" {
-    export interface GlobalComponents {
-      ElCol:typeof ElCol  
-    }
-}
+export default ZCol;

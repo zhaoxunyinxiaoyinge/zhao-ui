@@ -6,3 +6,5 @@
     app.use(ElSpace)
     app.mount("#app")
   ```
+[Link to vitepress文档](https://vitejs.cn/vitepress/guide/routing){target="_self"}
+<a href="/html/index.html" target="_self">Link to pure.html</a>

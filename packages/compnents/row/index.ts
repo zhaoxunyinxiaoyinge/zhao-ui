@@ -1,24 +1,14 @@
 import row from "./src/row.vue";
-import type { App, Plugin, Component } from "vue";
+import type { App, Plugin } from "vue";
 
-export type SFCwidthInstall<T> = T & Plugin;
-
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
-}
-
-const ElRow = withInstall(row);
-
+export type RowInstance = InstanceType<typeof row>;
+export type SFCWithInstall<T> = T & Plugin;
+const ZRow=row as SFCWithInstall<typeof row>
+ ZRow.install = (app:App)=>{
+    app.component("ZRow", row);
+  }
+export type { RowProps } from "./src/types";
 export {
-    ElRow
+  ZRow
 }
-export default ElRow;
-
-declare module "vue" {
-    export interface GlobalComponents {
-      ElRow:typeof ElRow  
-    }
-}
+export default ZRow;

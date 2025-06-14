@@ -1,24 +1,19 @@
-import Buttons from "./src/buttons.vue";
-import type { App, Plugin, Component } from "vue";
+import type { App,Plugin } from 'vue'
+import Button from './src/buttons.vue'
+// 导出组件类型
+export type ButtonInstance = InstanceType<typeof Button>
+export type SFCWithInstall<T> = T & Plugin;
 
-export type SFCwidthInstall<T> = T & Plugin;
+// 导出组件事件类型
+export type { ButtonEmits, ButtonProps } from './src/types';
 
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
-}
+ const ZButton = Button as SFCWithInstall<typeof Button>;
 
-const Button = withInstall(Buttons);
+  ZButton.install=(app:App)=>{
+      app.component("ZButton",ZButton)
+  }
 
-export {
-    Button
-}
-export default Button;
 
-declare module "vue" {
-    export interface GlobalComponents {
-        Button:typeof Button  
-    }
-}
+  export {ZButton}
+
+export default ZButton;

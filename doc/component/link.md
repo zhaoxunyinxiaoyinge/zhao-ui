@@ -5,27 +5,27 @@
     import {ref} from "vue";
 </script>
 <template> 
-   <Links type='primary' href="http://www.baidu.com">通知</Links>
+   <z-link type='primary' href="http://www.baidu.com">通知</z-link>
 </template>
 ```
 
 ### 常用链接提示
-<Links type="success">成功</Links>
-<Links type='danger'>危险</Links>
-<Links type='primary'>通知</Links>
-<Links type='warning' href="http://www.baidu.com">警告</Links>
-<Links type='info'>通知</Links>
-<Links type='success' icon="icon-bad" :underline="false">通知</Links>
+<z-link  type="success">成功</z-link>
+<z-link type='danger'>危险</z-link>
+<z-link type='primary'>通知</z-link>
+<z-link type='warning' href="http://www.baidu.com">警告</z-link>
+<z-link type='info'>通知</z-link>
+<z-link type='success' icon="icon-bad" :underline="false">通知</z-link>
 
 ### 禁用文字提示
-<Links type='info' disabled>禁用</Links>
-<Links type='success' disabled  icon="icon-bad" :underline="false">禁用图标</Links>
-<Links type="success" disabled>成功</Links>
-<Links type='danger' disabled>危险</Links>
-<Links type='primary' disabled>通知</Links>
-<Links type='warning' disabled href="http://www.baidu.com">警告</Links>
-<Links type='info' disabled>通知</Links>
-<Links type='success' icon="icon-bad" :underline="false" disabled>通知</Links>
+<z-link type='info' disabled>禁用</z-link>
+<z-link type='success' disabled  icon="icon-bad" :underline="false">禁用图标</z-link>
+<z-link type="success" disabled>成功</z-link>
+<z-link type='danger' disabled>危险</z-link>
+<z-link type='primary' disabled>通知</z-link>
+<z-link type='warning' disabled href="http://www.baidu.com">警告</z-link>
+<z-link type='info' disabled>通知</z-link>
+<z-link type='success' icon="icon-bad" :underline="false" disabled>通知</z-link>
 
 ## 属性
 | name        | 属性           | 值  |

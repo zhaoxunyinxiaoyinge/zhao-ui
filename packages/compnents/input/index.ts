@@ -1,25 +1,15 @@
 import input from "./src/index.vue";
-import type { App, Plugin,Component } from "vue";
+import type { App, Plugin } from "vue";
 
-type SFCwidthInstall<T> = T & Plugin;
+export  type  ZInputInstance= InstanceType<typeof input>;
+export type SFCWithInstall<T> = T & Plugin;
+const ZInput=input as SFCWithInstall<typeof input>
 
-const  withInstall = <T>(com:T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any).name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
+ ZInput.install = (app:App)=>{
+    app.component("ZInput", input);
+  } 
+export type {inputTypes} from "./src/types";
+export {
+  ZInput
 }
-const ElInput = withInstall(input);
-
-export  {
-    ElInput
-}
-
-
-export default ElInput;
-
-declare module "vue" {
-    export interface GlobalComponents {
-      ElInput: typeof ElInput;
-    }
-  }
+export default ZInput;

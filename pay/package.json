@@ -15,6 +15,7 @@
     "vite": "^3.2.5"
   },
   "dependencies": {
-    "zha-ui": "file:../dist/zhao-ui"
+    "vue": "^3.5.10",
+    "zha-ui": "link:d:/project/zhao-ui/dist"
   }
 }

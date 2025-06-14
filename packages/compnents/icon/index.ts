@@ -1,25 +1,16 @@
 import Icon from "./src/icon.vue";
-import type { App, Plugin,Component } from "vue";
+import type { App, Plugin } from "vue";
+export type SFCWithInstall<T> = T & Plugin;
+//导出实例
+export  type IconInstance= InstanceType<typeof Icon>;
+const ZIcon=Icon as SFCWithInstall<typeof Icon>
+  ZIcon.install = (app:App)=>{
+    app.component("ZIcon", Icon);
 
-type SFCwidthInstall<T> = T & Plugin;
+};
 
-const  withInstall = <T>(com:T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any).name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
+export type {IconProps} from "./src/types";
+export {
+  ZIcon
 }
-
-const ZIcon = withInstall(Icon);
-export  {
-    ZIcon
-}
-
-
 export default ZIcon;
-
-declare module "vue" {
-    export interface GlobalComponents {
-        ZIcons: typeof ZIcon;
-    }
-  }

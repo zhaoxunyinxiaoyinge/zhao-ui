@@ -1,23 +1,18 @@
 import Card from "./src/index.vue";
-import type { App, Plugin, Component } from "vue";
+import type { App, Plugin} from "vue";
 
-type SFCwidthInstall<T> = T & Plugin;
+const ZCard = Card as SFCWithInstall<typeof Card>;
+export type SFCWithInstall<T> = T & Plugin;
+ ZCard.install=(app:App)=>{
+    app.component("ZCard",ZCard);
+ }
 
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
-}
-
-const ElCard = withInstall(Card);
+//导出card实例类型
+export type CardInstance = InstanceType<typeof 
+Card>;
+export type { CardProps } from "./src/types";
 export {
-    ElCard
+  ZCard
 }
-export default ElCard;
 
-declare module "vue" {
-    export interface GlobalComponents {
-        ZElCard:typeof ElCard
-    }
-}
+export default ZCard

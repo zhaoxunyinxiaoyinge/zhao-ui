@@ -32,7 +32,8 @@ function createBuild(format, output) {
       VueSetupExtend(),
       vue(),
       typescript(
-          {tsconfig:"./tsconfig.json"}
+          {tsconfig:"./tsconfig.json"
+          }
       ),
       postcss(),
       babel({

@@ -14,15 +14,15 @@
    })
 </script>
 <template> 
-      <el-start :value='value' :maxValue='maxValue'></el-start>
+      <ZStart :value='value' :maxValue='maxValue'></ZStart>
 </template>
 ```
 1. 默认使用模式
-  <el-start :value="1" :maxValue='5'></el-start>
+  <ZStart :value="1" :maxValue='5'></ZStart>
 2. 仅可以展示的星星
-  <el-start disabled :value="1" :maxValue='5'></el-start>
+  <ZStart disabled :value="1" :maxValue='5'></ZStart>
 3. 不同颜色的星星
-  <el-start  :value="1" :activeColor='"#99CC99"' :maxValue='5'></el-start>
+  <ZStart  :value="1" :activeColor='"#99CC99"' :maxValue='5'></ZStart>
 ## 属性
   | 属性名        | 属性值          | 类型  |
 | ------------- |:-------------:| -----:|

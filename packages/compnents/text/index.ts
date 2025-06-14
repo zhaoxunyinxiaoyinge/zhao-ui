@@ -1,23 +1,13 @@
 import Text from "./src/text.vue";
-import type { App, Plugin, Component } from "vue";
-
-type SFCwidthInstall<T> = T & Plugin;
-
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
-}
-
-const ElText = withInstall(Text);
+import type { App, Plugin } from "vue";
+export type SFCWithInstall<T> = T & Plugin;
+const ZText=Text as SFCWithInstall<typeof Text>
+ZText.install = (app:App)=>{
+    app.component("ZText", Text);
+};
+export type TextInstance = InstanceType<typeof Text>;
+export type { textType } from "./src/types";
 export {
-  ElText
+  ZText
 }
-export default ElText;
-
-declare module "vue" {
-    export interface GlobalComponents {
-      ElText:typeof ElText
-    }
-}
+export default ZText;

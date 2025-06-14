@@ -1,6 +1,6 @@
 <script lang="ts">
 import { CSSProperties, computed, defineComponent, ref } from 'vue';
-import { getPassProps } from "./index"
+import { getPassProps } from "./types"
 import { inject } from 'vue';
 import { createNamespace,isObject,isNumber,rowContextKey} from "@zhao/utils";
 import type { InjectionKeyRow } from "@zhao/utils/tokens";

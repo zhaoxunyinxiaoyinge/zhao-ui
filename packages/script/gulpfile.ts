@@ -1,36 +1,35 @@
 import { src, dest, series } from "gulp";
-import { run, withTaskname } from "../../build/utils";
-import { projectPath } from "./../../build/utils/path";
+import { run } from "../../build/utils";
 import path from "path";
 
+// 复制 package.json 到 dist 目录
 const copypackage = async () => {
-  return src(`./package.json`).pipe(dest(`${projectPath}/dist/zhao-ui`));
+  return src(path.resolve(__dirname, "./package.json"))
+    .pipe(dest(path.resolve(__dirname, "../../dist")));
 };
 
+// 复制组件的 ES 模块到 dist/es
 const copyComponentEs = async () => {
-  return src(`./../compnents/dist/es/**`).pipe(dest(`${projectPath}/dist/zhao-ui/es/components`));
+  return src(path.resolve(__dirname, "../compnents/dist/es/**"))
+    .pipe(dest(path.resolve(__dirname, "../../dist/es")));
 };
 
+// 复制组件的 Lib 模块到 dist/lib
 const copyComponentLib = async () => {
-  return src(`./../compnents/dist/lib/**`).pipe(dest(`${projectPath}/dist/zhao-ui/lib/components`));
+  return src(path.resolve(__dirname, "../compnents/dist/lib/**"))
+    .pipe(dest(path.resolve(__dirname, "../../dist/lib")));
 };
-//发布任务
+
+// 发布任务
 const publish = async () => {
-  //先给transitpkg升个版本
-  await run('pnpm version patch', projectPath)
-  //复制到dist目录
-  await copypackage()
-
+  // 升级版本号
+  // await run("pnpm version patch", path.resolve(__dirname, "../../"));
+  // 复制文件
+  await copypackage();
   await copyComponentEs();
-
   await copyComponentLib();
-  
-  console.log(__dirname,5555)
-  //在dist下执行发布命令
-  // await run('pnpm publish', path.resolve(process.cwd(),"dist"));
-  // run('pnpm publish')
-}
 
-export default series(
-    publish
-)
+  console.log("文件已成功复制到 dist 目录");
+};
+
+export default series(publish);

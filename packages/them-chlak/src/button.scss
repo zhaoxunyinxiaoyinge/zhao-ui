@@ -23,10 +23,14 @@
     }
 
     &.is-cirle {
-        padding: 5px 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-clamp: 1;
+        white-space: nowrap;
         border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        padding: 5px;
+        width: 50px;
+        height: 50px;
         font-size: 12px;
         line-height: 1;
     }
@@ -47,12 +51,12 @@
         font-size: 14px;
         &:not([disabled]) {
             &:hover {
-                background-color: fade-out(#d4d7de, .4);
+                background-color: rgba(#d4d7de, .6);
                 color: #fff
             }
 
             &:active {
-                background-color: fade-out(#d4d7de, .1);
+                background-color: rgba(#d4d7de, .9);
             }
         }
     }
@@ -64,18 +68,18 @@
 
         &.is-plain {
             border: 1px solid #409eff;
-            background-color: fade-out(#409eff, 1);
+            background-color: rgba(#409eff, 0);
             color: #409eff;
         }
 
         &:not([disabled]) {
             &:hover {
-                background-color: fade-out(#409eff, .4);
+                background-color: rgba(#409eff, .6);
                 color: #fff
             }
 
             &:active {
-                background-color: fade-out(#409eff, .1);
+                background-color: rgba(#409eff, .9);
             }
         }
     }
@@ -87,18 +91,18 @@
 
         &.is-plain {
             border: 1px solid rgba(238, 206, 102);
-            background-color: fade-out(rgba(238, 206, 102), 1);
+            background-color: rgba(rgba(238, 206, 102), 0);
             color: rgba(238, 206, 102);
         }
 
         &:not([disabled]) {
             &:hover {
-                background-color: fade-out(rgba(238, 206, 102), .4);
+                background-color: rgba(rgba(238, 206, 102), .6);
                 color: #fff
             }
 
             &:active {
-                background-color: fade-out(rgba(238, 206, 102), .1);
+                background-color: rgba(rgba(238, 206, 102), .9);
             }
         }
     }
@@ -110,18 +114,18 @@
 
         &.is-plain {
             border: 1px solid #f56c6c;
-            background-color: fade-out(#f56c6c, 1);
+            background-color: rgba(#f56c6c, 0);
             color: #f56c6c;
         }
 
         &:not([disabled]) {
             &:hover {
-                background-color: fade-out(#f56c6c, .4);
+                background-color: rgba(#f56c6c, .6);
                 color: #fff
             }
 
             &:active {
-                background-color: fade-out(#f56c6c, .1);
+                background-color: rgba(#f56c6c, .9);
             }
         }
     }
@@ -133,18 +137,18 @@
 
         &.is-plain {
             border: 1px solid #a5a5a5;
-            background-color: fade-out(#a5a5a5, 1);
+            background-color: rgba(#a5a5a5, 0);
             color: #a5a5a5;
         }
 
         &:not([disabled]) {
         &:hover {
-            background-color: fade-out(#a5a5a5, .4);
+            background-color: rgba(#a5a5a5, .6);
             color: #fff
         }
 
         &:active {
-            background-color: fade-out(#a5a5a5, .1);
+            background-color: rgba(#a5a5a5, .9);
         }
     }
     }
@@ -156,17 +160,17 @@
 
         &.is-plain {
             border: 1px solid #67C23A;
-            background-color: fade-out(#67C23A, 1);
+            background-color: rgba(#67C23A, 0);
             color: #67C23A;
         }
         &:not([disabled]) {
         &:hover {
-            background-color: fade-out(#67C23A, .4);
+            background-color: rgba(#67C23A, .6);
             color: #fff
         }
 
         &:active {
-            background-color: fade-out(#67C23A, .1);
+            background-color: rgba(#67C23A, .9);
         }
     }
     }

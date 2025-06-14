@@ -1,0 +1,26 @@
+{
+  "name": "zha-ui",
+  "version": "1.0.9",
+  "main": "lib/index.cjs",
+  "module": "es/zhao-ui.esm-bundler.js",
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "zha-ui",
+    "vue3组件库"
+  ],
+  "author": "zhaoxunyin",
+  "license": "MIT",
+  "description": "前端开发测试ui组件库",
+  "types": "types/compnents/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+
+  }
+}

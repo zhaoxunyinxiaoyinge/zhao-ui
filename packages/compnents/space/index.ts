@@ -1,23 +1,15 @@
 import Space from "./src/index.vue";
-import type { App, Plugin, Component } from "vue";
+import type { App, Plugin } from "vue";
+export type SFCWithInstall<T> = T & Plugin;
+const ZSpace=Space as SFCWithInstall<typeof Space>
+ ZSpace.install =(app:App)=> {
+    app.component("ZSpace", Space);
+};
 
-type SFCwidthInstall<T> = T & Plugin;
-
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
-}
-
-const ElSpace = withInstall(Space);
 export {
-    ElSpace
-}
-export default ElSpace;
+  ZSpace
+};
+export type { SpaceProps } from "./src/types";
+export type SpaceInstance = InstanceType<typeof Space>;
 
-declare module "vue" {
-    export interface GlobalComponents {
-        ZElSpace: typeof ElSpace
-    }
-}
+export default ZSpace;

@@ -10,7 +10,7 @@
 
 <script lang="ts" >
 import { ref, defineComponent, onMounted, reactive, InjectionKey, Ref } from "vue";
-import { getPassProps } from "./scrollbar";
+import { getPassProps } from "./types";
 export default defineComponent({
     name: "ScrollBar",
     props: getPassProps,

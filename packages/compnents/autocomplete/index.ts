@@ -1,23 +1,18 @@
-import Autocomplete from "./src/index.vue";
-import type { App, Plugin, Component } from "vue";
+import type { App,Plugin } from 'vue'
+import Autocomplete from './src/index.vue'
 
-type SFCwidthInstall<T> = T & Plugin;
-
-const withInstall = <T>(com: T) => {
-    (com as SFCwidthInstall<T>).install = function (app: App) {
-        app.component((com as any)?.name, com as Component)
-    }
-    return com as SFCwidthInstall<T>
+// 导出组件类型
+export type ButtonInstance = InstanceType<typeof Autocomplete>
+export type SFCWithInstall<T> = T & Plugin;
+// 导出组件事件类型
+export type { AutocompleteProps } from './src/types';
+const ZAutocomplete=Autocomplete as SFCWithInstall<typeof Autocomplete>
+// 组件注册
+ ZAutocomplete.install =(app:App)=> {
+    app.component("ZAutocomplete", Autocomplete);
 }
 
-const ElAutocomplete = withInstall(Autocomplete);
 export {
-    ElAutocomplete
+  ZAutocomplete
 }
-export default ElAutocomplete;
-
-declare module  "vue" {
-    export interface GlobalComponents {
-        ElAutocompleteType:typeof ElAutocomplete
-    }
-}
+export default ZAutocomplete;

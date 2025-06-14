@@ -1,5 +1,4 @@
 ## Icon 图标的使用
-
 ```vue
 <script lang='ts' setup>
     import {ref} from "vue";
@@ -13,6 +12,7 @@
 <ZIcon icon="icon-add">添加</ZIcon>
 <br/>
 <ZIcon icon="icon-ashbin">删除</ZIcon>
+<ZIcon icon='icon-iconfontmark'>用户</ZIcon>
 
 ::: danger
 这是自定义组件,功能不全，暂不能在全局环境中使用
