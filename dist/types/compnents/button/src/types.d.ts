@@ -17,7 +17,6 @@ export declare const getPassProps: {
         readonly default: "";
     };
     readonly disabled: BooleanConstructor;
-    readonly loading: BooleanConstructor;
 };
 export type ButtonProps = ExtractPropTypes<typeof getPassProps>;
 export type ButtonEmits = {

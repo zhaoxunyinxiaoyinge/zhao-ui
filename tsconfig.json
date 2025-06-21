@@ -116,7 +116,6 @@
   "packages/compnents/**/*.tsx",
   "packages/compnents/**/*.vue",
   "types/**/*.d.ts",
-  "pay/**/*.vue",
-  "global.d.ts"
+  "pay/**/*.vue"
 , "pay/shimd.d.ts", "pay/src/demo/index.ts" ],
 }

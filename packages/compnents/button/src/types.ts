@@ -23,7 +23,7 @@ export const getPassProps = {
         default: ''
     },
     disabled: Boolean,
-    loading: Boolean,
+ 
 } as const
 
 export type ButtonProps = ExtractPropTypes<typeof getPassProps>

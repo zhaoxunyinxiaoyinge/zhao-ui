@@ -28,7 +28,6 @@ export default defineComponent({
         let isLoading = ref(false);
         
         onMounted(() => {
-            console.log(attrs,"attrs")
             isplain.value = "plain" in attrs;
             isCirle.value = "cirle" in attrs;
             isRound.value = 'round' in attrs;

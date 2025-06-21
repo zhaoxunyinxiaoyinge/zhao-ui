@@ -11,7 +11,7 @@
     "doc": "pnpm -C doc dev",
     "publish": "npx gulp -f  ./packages/script/gulpfile.ts",
     "test": "vitest",
-     "build:types": "npx vue-tsc --declaration --emitDeclarationOnly"
+    "build:types": "npx vue-tsc --declaration --emitDeclarationOnly"
   },
   "author": "zhaoxunyin",
   "license": "ISC",
@@ -55,6 +55,7 @@
     "@zhao/them-chlak": "workspace:^1.0.0",
     "@zhao/utils": "workspace:^1.0.0",
     "loaders.css": "^0.1.2",
+    "rimraf": "^6.0.1",
     "rollup": "^3.21.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-postcss": "^4.0.2",

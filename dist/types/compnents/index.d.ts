@@ -1,4 +1,4 @@
-import type { App } from 'vue';
+import type { App, Component } from 'vue';
 import { ZButton, type ButtonProps, type ButtonInstance } from './button';
 import { ZIcon, type IconInstance, type IconProps } from './icon';
 import { ZLink, type LinkInstance, type LinkProps } from './link';
@@ -31,7 +31,6 @@ export declare const components: (({
             readonly default: "";
         };
         readonly disabled: BooleanConstructor;
-        readonly loading: BooleanConstructor;
     }>> & Readonly<{}>, {
         props: import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly type: {
@@ -49,7 +48,6 @@ export declare const components: (({
                 readonly default: "";
             };
             readonly disabled: BooleanConstructor;
-            readonly loading: BooleanConstructor;
         }>> & Readonly<{}> & {}>;
         isplain: import("vue").Ref<boolean, boolean>;
         isCirle: import("vue").Ref<boolean, boolean>;
@@ -64,7 +62,6 @@ export declare const components: (({
         readonly size: import("./button/src/types").ButtonSize;
         readonly icon: string;
         readonly disabled: boolean;
-        readonly loading: boolean;
     }, true, {}, {}, {
         icon: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
             icon: {
@@ -116,7 +113,6 @@ export declare const components: (({
             readonly default: "";
         };
         readonly disabled: BooleanConstructor;
-        readonly loading: BooleanConstructor;
     }>> & Readonly<{}>, {
         props: import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly type: {
@@ -134,7 +130,6 @@ export declare const components: (({
                 readonly default: "";
             };
             readonly disabled: BooleanConstructor;
-            readonly loading: BooleanConstructor;
         }>> & Readonly<{}> & {}>;
         isplain: import("vue").Ref<boolean, boolean>;
         isCirle: import("vue").Ref<boolean, boolean>;
@@ -149,7 +144,6 @@ export declare const components: (({
         readonly size: import("./button/src/types").ButtonSize;
         readonly icon: string;
         readonly disabled: boolean;
-        readonly loading: boolean;
     }>;
     __isFragment?: never;
     __isTeleport?: never;
@@ -170,7 +164,6 @@ export declare const components: (({
         readonly default: "";
     };
     readonly disabled: BooleanConstructor;
-    readonly loading: BooleanConstructor;
 }>> & Readonly<{}>, {
     props: import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
         readonly type: {
@@ -188,7 +181,6 @@ export declare const components: (({
             readonly default: "";
         };
         readonly disabled: BooleanConstructor;
-        readonly loading: BooleanConstructor;
     }>> & Readonly<{}> & {}>;
     isplain: import("vue").Ref<boolean, boolean>;
     isCirle: import("vue").Ref<boolean, boolean>;
@@ -203,7 +195,6 @@ export declare const components: (({
     readonly size: import("./button/src/types").ButtonSize;
     readonly icon: string;
     readonly disabled: boolean;
-    readonly loading: boolean;
 }, {}, string, {}, {
     icon: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
         icon: {
@@ -249,7 +240,6 @@ export declare const components: (({
             readonly default: "";
         };
         readonly disabled: BooleanConstructor;
-        readonly loading: BooleanConstructor;
     }>> & Readonly<{}>, {
         props: import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly type: {
@@ -267,7 +257,6 @@ export declare const components: (({
                 readonly default: "";
             };
             readonly disabled: BooleanConstructor;
-            readonly loading: BooleanConstructor;
         }>> & Readonly<{}> & {}>;
         isplain: import("vue").Ref<boolean, boolean>;
         isCirle: import("vue").Ref<boolean, boolean>;
@@ -282,7 +271,6 @@ export declare const components: (({
         readonly size: import("./button/src/types").ButtonSize;
         readonly icon: string;
         readonly disabled: boolean;
-        readonly loading: boolean;
     }, true, {}, {}, {
         icon: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
             icon: {
@@ -334,7 +322,6 @@ export declare const components: (({
             readonly default: "";
         };
         readonly disabled: BooleanConstructor;
-        readonly loading: BooleanConstructor;
     }>> & Readonly<{}>, {
         props: import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly type: {
@@ -352,7 +339,6 @@ export declare const components: (({
                 readonly default: "";
             };
             readonly disabled: BooleanConstructor;
-            readonly loading: BooleanConstructor;
         }>> & Readonly<{}> & {}>;
         isplain: import("vue").Ref<boolean, boolean>;
         isCirle: import("vue").Ref<boolean, boolean>;
@@ -367,7 +353,6 @@ export declare const components: (({
         readonly size: import("./button/src/types").ButtonSize;
         readonly icon: string;
         readonly disabled: boolean;
-        readonly loading: boolean;
     }>;
     __isFragment?: never;
     __isTeleport?: never;
@@ -388,7 +373,6 @@ export declare const components: (({
         readonly default: "";
     };
     readonly disabled: BooleanConstructor;
-    readonly loading: BooleanConstructor;
 }>> & Readonly<{}>, {
     props: import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
         readonly type: {
@@ -406,7 +390,6 @@ export declare const components: (({
             readonly default: "";
         };
         readonly disabled: BooleanConstructor;
-        readonly loading: BooleanConstructor;
     }>> & Readonly<{}> & {}>;
     isplain: import("vue").Ref<boolean, boolean>;
     isCirle: import("vue").Ref<boolean, boolean>;
@@ -421,7 +404,6 @@ export declare const components: (({
     readonly size: import("./button/src/types").ButtonSize;
     readonly icon: string;
     readonly disabled: boolean;
-    readonly loading: boolean;
 }, {}, string, {}, {
     icon: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
         icon: {
@@ -4903,8 +4885,8 @@ export declare const components: (({
         }>> & Readonly<{}> & {}>;
     }, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {
         readonly disabled: boolean;
-        readonly loading: boolean;
         readonly value: string;
+        readonly loading: boolean;
         readonly placeholder: string;
         readonly clearable: boolean;
         readonly multiple: boolean;
@@ -4975,8 +4957,8 @@ export declare const components: (({
         }>> & Readonly<{}> & {}>;
     }, {}, {}, {}, {
         readonly disabled: boolean;
-        readonly loading: boolean;
         readonly value: string;
+        readonly loading: boolean;
         readonly placeholder: string;
         readonly clearable: boolean;
         readonly multiple: boolean;
@@ -5044,8 +5026,8 @@ export declare const components: (({
     }>> & Readonly<{}> & {}>;
 }, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
     readonly disabled: boolean;
-    readonly loading: boolean;
     readonly value: string;
+    readonly loading: boolean;
     readonly placeholder: string;
     readonly clearable: boolean;
     readonly multiple: boolean;
@@ -5110,8 +5092,8 @@ export declare const components: (({
         }>> & Readonly<{}> & {}>;
     }, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {
         readonly disabled: boolean;
-        readonly loading: boolean;
         readonly value: string;
+        readonly loading: boolean;
         readonly placeholder: string;
         readonly clearable: boolean;
         readonly multiple: boolean;
@@ -5182,8 +5164,8 @@ export declare const components: (({
         }>> & Readonly<{}> & {}>;
     }, {}, {}, {}, {
         readonly disabled: boolean;
-        readonly loading: boolean;
         readonly value: string;
+        readonly loading: boolean;
         readonly placeholder: string;
         readonly clearable: boolean;
         readonly multiple: boolean;
@@ -5251,8 +5233,8 @@ export declare const components: (({
     }>> & Readonly<{}> & {}>;
 }, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
     readonly disabled: boolean;
-    readonly loading: boolean;
     readonly value: string;
+    readonly loading: boolean;
     readonly placeholder: string;
     readonly clearable: boolean;
     readonly multiple: boolean;
@@ -5267,6 +5249,27 @@ export declare const ZhaoUI: {
     version: string;
     install(app: App, options?: {}): void;
 };
+//新增全局类型提示的支持
+declare module "vue" {
+  export interface GlobalComponents {
+    ZButton:typeof ZButton;
+    ZAutocomplete:typeof ZAutocomplete;
+    ZCard:typeof ZCard;
+    ZCol:typeof ZCol;
+    ZInput:typeof ZInput;
+    ZInputNumber:typeof ZInputNumber;
+    ZLink:typeof ZLink;
+    ZSpace:typeof ZSpace;
+    ZScrollBarBar:typeof ZScrollBarBar;
+    ZRow:typeof ZRow;
+    ZTooltip:typeof ZTooltip;
+    ZText:typeof ZText 
+    ZStart:typeof ZStart,
+     [key: string]: Component; // 新增这一行
+  }
+  export interface GlobalDirectives {
+    [key: string]: import("vue").Directive; // 新增这一行，保证指令类型兼容
+  }
+}
 export { ZButton, ZIcon, ZLink, ZCard, ZInput, ZTooltip, ZSpace, ZStart, ZText, ZRow, ZCol, ZScrollBarBar, ZAutocomplete, ZInputNumber };
-export type * from "./global"
 export default ZhaoUI;

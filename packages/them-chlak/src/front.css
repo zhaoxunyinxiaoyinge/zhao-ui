@@ -1,8 +1,98 @@
-
-/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
-  font-family: 'iconfont';  /* Project id 4949315 */
-  src: url('//at.alicdn.com/t/c/font_4949315_tqaoc4k9c5.woff2?t=1749866531720') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4949315_tqaoc4k9c5.woff?t=1749866531720') format('woff'),
-       url('//at.alicdn.com/t/c/font_4949315_tqaoc4k9c5.ttf?t=1749866531720') format('truetype');
+  font-family: "iconfont"; /* Project id 4949315 */
+  src: url('./font/iconfont.woff2') format('woff2'),
+       url('./font/iconfont.woff') format('woff'),
+       url('./font/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfontwo:before {
+  content: "\e618";
+}
+
+.icon-iconfonttel:before {
+  content: "\e62f";
+}
+
+.icon-custom-praise:before {
+  content: "\e617";
+}
+
+.icon-iconfontmark:before {
+  content: "\e619";
+}
+
+.icon-iconfontunfold:before {
+  content: "\e62a";
+}
+
+.icon-iconfontlike:before {
+  content: "\e64a";
+}
+
+.icon-iconfontstar:before {
+  content: "\e63d";
+}
+
+.icon-iconfontup:before {
+  content: "\e63f";
+}
+
+.icon-jianchagengxin:before {
+  content: "\e687";
+}
+
+.icon-iconfontxing:before {
+  content: "\e632";
+}
+
+.icon-iconfontbi:before {
+  content: "\e61a";
+}
+
+.icon-cartplus:before {
+  content: "\eb8a";
+}
+
+.icon-iconfont17:before {
+  content: "\e611";
+}
+
+.icon-plus:before {
+  content: "\e6c8";
+}
+
+.icon-iconfont-home:before {
+  content: "\e660";
+}
+
+.icon-bangzhu:before {
+  content: "\e659";
+}
+
+.icon-24gl-check:before {
+  content: "\e97d";
+}
+
+.icon-jiancha:before {
+  content: "\e6c1";
+}
+
+.icon-zujiantubiaojiantou:before {
+  content: "\e69c";
+}
+
+.icon-jianchagengxin1:before {
+  content: "\e823";
+}
+
+.icon-volume-plus:before {
+  content: "\e6f5";
 }

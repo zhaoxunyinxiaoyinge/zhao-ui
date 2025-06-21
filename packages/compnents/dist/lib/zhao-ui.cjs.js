@@ -23,8 +23,7 @@ const getPassProps$6 = {
     type: String,
     default: ''
   },
-  disabled: Boolean,
-  loading: Boolean
+  disabled: Boolean
 };
 
 const getPassProps$5 = {
@@ -112,7 +111,6 @@ var script$c = vue.defineComponent({
     let isRound = vue.ref(false);
     let isLoading = vue.ref(false);
     vue.onMounted(() => {
-      console.log(attrs, "attrs");
       isplain.value = "plain" in attrs;
       isCirle.value = "cirle" in attrs;
       isRound.value = 'round' in attrs;

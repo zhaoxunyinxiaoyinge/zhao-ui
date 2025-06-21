@@ -14,7 +14,6 @@ declare const _default: import("vue").DefineComponent<import("vue").ExtractPropT
         readonly default: "";
     };
     readonly disabled: BooleanConstructor;
-    readonly loading: BooleanConstructor;
 }>, {
     props: import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
         readonly type: {
@@ -32,7 +31,6 @@ declare const _default: import("vue").DefineComponent<import("vue").ExtractPropT
             readonly default: "";
         };
         readonly disabled: BooleanConstructor;
-        readonly loading: BooleanConstructor;
     }>> & Readonly<{}> & {}>;
     isplain: import("vue").Ref<boolean, boolean>;
     isCirle: import("vue").Ref<boolean, boolean>;
@@ -58,13 +56,11 @@ declare const _default: import("vue").DefineComponent<import("vue").ExtractPropT
         readonly default: "";
     };
     readonly disabled: BooleanConstructor;
-    readonly loading: BooleanConstructor;
 }>> & Readonly<{}>, {
     readonly type: import("./types").ButtonType;
     readonly size: import("./types").ButtonSize;
     readonly icon: string;
     readonly disabled: boolean;
-    readonly loading: boolean;
 }, {}, {
     icon: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
         icon: {

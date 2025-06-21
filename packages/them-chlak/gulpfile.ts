@@ -16,7 +16,7 @@ const complie = () => {
     }
 
 const copy = () => {
-    return src(path.resolve(__dirname, "./src/font/**")).pipe(cleanCss()).pipe(dest('./dist/font'))
+    return src(path.resolve(__dirname, "./src/font/**")).pipe(dest('./dist/font'))
 }
 
 const copyStyle = () => {

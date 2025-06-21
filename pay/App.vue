@@ -1,19 +1,18 @@
 <template>
     <div>
         <div class="content">按钮组</div>
-        <ZButton :size="'default'" :icon="'icon-add'" cirle type="primary" :disabled="false">按钮</ZButton>
+        <ZButton :size="'default'" :icon="'icon-cartplus'" cirle type="primary" :disabled="false">按钮</ZButton>
         <ZButton type="danger" disabled>按钮</ZButton>
-        <ZButton icon="icon-add"  type="success" plain>按钮</ZButton>
-        <ZButton type="info" >按钮</ZButton>
-        <ZButton type="warning" >按钮</ZButton>
-        <ZStart :value="4" ></ZStart>
-        <videos :name="'xioakei'"  age="'34'"></videos>
+        <ZButton icon="icon-plus"  type="success" >按钮</ZButton>
+        <ZButton type="info" loading>按钮</ZButton>
+        <ZButton type="danger" :size="'large'">按钮</ZButton>
+        <ZButton type="info" :size="'default'" icon="icon-iconfontbi">按钮</ZButton>
+        <ZButton type="danger"  icon="icon-plus"></ZButton>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { ZStart } from "zha-ui";
-import videos from "./src/components/videos.vue";
+
 
 </script>
 <style scoped>

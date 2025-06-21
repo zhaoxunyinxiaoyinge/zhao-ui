@@ -19,8 +19,7 @@ const getPassProps$6 = {
     type: String,
     default: ''
   },
-  disabled: Boolean,
-  loading: Boolean
+  disabled: Boolean
 };
 
 const getPassProps$5 = {
@@ -108,7 +107,6 @@ var script$c = defineComponent({
     let isRound = ref(false);
     let isLoading = ref(false);
     onMounted(() => {
-      console.log(attrs, "attrs");
       isplain.value = "plain" in attrs;
       isCirle.value = "cirle" in attrs;
       isRound.value = 'round' in attrs;
@@ -153,15 +151,14 @@ function render$c(_ctx, _cache, $props, $setup, $data, $options) {
 script$c.render = render$c;
 script$c.__file = "button/src/buttons.vue";
 
-script$c.name = 'ZButton';
-script$c.install = app => {
-  app.component('ZButton', script$c);
+const ZButton = script$c;
+ZButton.install = app => {
+  app.component("ZButton", ZButton);
 };
 
-const ZIcon = {
-  install(app) {
-    app.component("ZIcon", script$e);
-  }
+const ZIcon = script$e;
+ZIcon.install = app => {
+  app.component("ZIcon", script$e);
 };
 
 const getPassProps$4 = {
@@ -219,10 +216,9 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
 script$b.render = render$b;
 script$b.__file = "link/src/link.vue";
 
-const ZLink = {
-  install(app) {
-    app.component("ZLink", script$b);
-  }
+const ZLink = script$b;
+ZLink.install = app => {
+  app.component("ZLink", script$b);
 };
 
 const cardProps = {
@@ -281,10 +277,9 @@ function render$a(_ctx, _cache, $props, $setup, $data, $options) {
 script$a.render = render$a;
 script$a.__file = "card/src/index.vue";
 
-const ZCard = {
-  install(app) {
-    app.component("ZCard", script$a);
-  }
+const ZCard = script$a;
+ZCard.install = app => {
+  app.component("ZCard", ZCard);
 };
 
 const inputProps = {
@@ -373,10 +368,9 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
 script$9.render = render$9;
 script$9.__file = "input/src/index.vue";
 
-const ZInput = {
-  install(app) {
-    app.component("ZInput", script$9);
-  }
+const ZInput = script$9;
+ZInput.install = app => {
+  app.component("ZInput", script$9);
 };
 
 const inputNumberProps = {
@@ -458,13 +452,28 @@ function render$8(_ctx, _cache, $props, $setup, $data, $options) {
 script$8.render = render$8;
 script$8.__file = "inputNmuber/src/index.vue";
 
-const ZInputNumber = {
-  install(app) {
-    app.component("ZInputNumber", script$8);
+const ZInputNumber = script$8;
+ZInputNumber.install = app => {
+  app.component("ZInputNumber", script$8);
+};
+
+const tooltipProps = {
+  trigger: {
+    type: String,
+    default: "hover"
+  },
+  placement: {
+    type: String,
+    default: "top"
+  },
+  content: {
+    type: String,
+    default: ""
   }
 };
 
 var script$7 = defineComponent({
+  props: tooltipProps,
   setup() {
     return {};
   }
@@ -477,10 +486,9 @@ function render$7(_ctx, _cache, $props, $setup, $data, $options) {
 script$7.render = render$7;
 script$7.__file = "tooltip/src/index.vue";
 
-const ZTooltip = {
-  install(app) {
-    app.component("ZTooltip", script$7);
-  }
+const ZTooltip = script$7;
+ZTooltip.install = app => {
+  app.component("ZTooltip", script$7);
 };
 
 const isAarray = arr => {
@@ -763,10 +771,9 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
 script$6.render = render$6;
 script$6.__file = "space/src/index.vue";
 
-const ZSpace = {
-  install(app) {
-    app.component("ZSpace", script$6);
-  }
+const ZSpace = script$6;
+ZSpace.install = app => {
+  app.component("ZSpace", script$6);
 };
 
 const startProps = {
@@ -868,10 +875,9 @@ script$5.render = render$5;
 script$5.__scopeId = "data-v-534fa15c";
 script$5.__file = "start/src/index.vue";
 
-const ZStart = {
-  install(app) {
-    app.component("ZStart", script$5);
-  }
+const ZStart = script$5;
+ZStart.install = app => {
+  app.component("ZStart", script$5);
 };
 
 const sizes = ["large", "default", "small"];
@@ -924,10 +930,9 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
 script$4.render = render$4;
 script$4.__file = "text/src/text.vue";
 
-const ZText = {
-  install(app) {
-    app.component("ZText", script$4);
-  }
+const ZText = script$4;
+ZText.install = app => {
+  app.component("ZText", script$4);
 };
 
 const RowJustify = ['start', 'center', 'end', 'space-around', 'space-between', 'space-evenly'];
@@ -1007,10 +1012,9 @@ function render$3(_ctx, _cache, $props, $setup, $data, $options) {
 script$3.render = render$3;
 script$3.__file = "row/src/row.vue";
 
-const ZRow = {
-  install(app) {
-    app.component("ZRow", script$3);
-  }
+const ZRow = script$3;
+ZRow.install = app => {
+  app.component("ZRow", script$3);
 };
 
 const RowAlign = ['top', 'middle', 'bottom'];
@@ -1120,10 +1124,9 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
 script$2.render = render$2;
 script$2.__file = "col/src/col.vue";
 
-const ZCol = {
-  install(app) {
-    app.component("ZCol", script$2);
-  }
+const ZCol = script$2;
+ZCol.install = app => {
+  app.component("ZCol", ZCol);
 };
 
 const getPassProps$1 = {
@@ -1229,10 +1232,9 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
 script$1.render = render$1;
 script$1.__file = "scrollBar/src/index.vue";
 
-const ZScrollBarBar = {
-  install(app) {
-    app.component("ZScrollBar", script$1);
-  }
+const ZScrollBarBar = script$1;
+ZScrollBarBar.install = app => {
+  app.component("ZScrollBar", script$1);
 };
 
 const getPassProps = {
@@ -1276,25 +1278,26 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 script.render = render;
 script.__file = "autocomplete/src/index.vue";
 
+const ZAutocomplete = script;
 // 组件注册
-const ZAutocomplete = {
-  install(app) {
-    app.component("ZAutocomplete", script);
-  }
+ZAutocomplete.install = app => {
+  app.component("ZAutocomplete", script);
 };
 
 // 导入组件
 // 组件列表
-const components = [script$c, ZIcon, ZLink, ZCard, ZInput, ZTooltip, ZSpace, ZStart, ZText, ZRow, ZCol, ZScrollBarBar, ZAutocomplete, ZInputNumber];
+const components = [ZButton, ZIcon, ZLink, ZCard, ZInput, ZTooltip, ZSpace, ZStart, ZText, ZRow, ZCol, ZScrollBarBar, ZAutocomplete, ZInputNumber];
 // 统一注册插件
 const ZhaoUI = {
   version: "0.1",
   install(app, options = {}) {
     components.forEach(component => {
-      component.install(app);
+      if (component && typeof component.install === 'function') {
+        component.install(app);
+      }
     });
   }
 };
 
-export { ZAutocomplete, script$c as ZButton, ZCard, ZCol, ZIcon, ZInput, ZInputNumber, ZLink, ZRow, ZScrollBarBar, ZSpace, ZStart, ZText, ZTooltip, ZhaoUI, components, ZhaoUI as default };
+export { ZAutocomplete, ZButton, ZCard, ZCol, ZIcon, ZInput, ZInputNumber, ZLink, ZRow, ZScrollBarBar, ZSpace, ZStart, ZText, ZTooltip, ZhaoUI, components, ZhaoUI as default };
 //# sourceMappingURL=zhao-ui.esm-bundler.js.map

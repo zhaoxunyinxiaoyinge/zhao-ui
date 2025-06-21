@@ -77,8 +77,8 @@ declare const _default: import("vue").DefineComponent<import("vue").ExtractPropT
     readonly filterable: BooleanConstructor;
 }>> & Readonly<{}>, {
     readonly disabled: boolean;
-    readonly loading: boolean;
     readonly value: string;
+    readonly loading: boolean;
     readonly placeholder: string;
     readonly clearable: boolean;
     readonly multiple: boolean;
