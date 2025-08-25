@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Zhao UI
 
 [![npm version](https://img.shields.io/npm/v/zhao-ui.svg?style=flat)](https://www.npmjs.com/package/zhao-ui)
@@ -14,22 +13,38 @@
 - 📦 **开箱即用** - 提供丰富的基础组件，即装即用
 - 🎯 **TypeScript** - 完整的 TypeScript 类型支持
 - 🎨 **主题定制** - 支持灵活的主题定制和样式覆盖
-- 📱 **响应式** - 完美适配移动端和桌面端
+- 📱 **响应式** - 完美适配桌面端
 - 🔧 **易于集成** - 简单的 API 设计，快速集成到现有项目
 - ♿ **无障碍** - 支持 ARIA 标准，关注无障碍访问
 
 ## 📦 安装
 
 ### 使用 npm
+  # npm install zhao-ui
 
-### 使用 yarn
+### 使用pnpm
+  # pnpm add zhao-ui
 
 ## 🚀 快速开始
+  # javascript
+    // main.js 或 main.ts
 
-### Vue.js 项目
+    import { createApp } from 'vue'
+
+    import App from './App.vue'
+
+    import ZhaoUI from 'zhao-ui'
+
+    import 'zhao-ui/dist/zhao-ui.css' // 引入样式
+
+    const app = createApp(App)
+
+    app.use(ZhaoUI)
+
+    app.mount('#app')
 
 ## 📚 组件文档
-
+    
 ### 基础组件
 
 | 组件名 | 描述 | 使用示例 |
@@ -52,10 +67,3 @@
 
 ## 🔍 使用示例
 
-### Button 组件
-=======
-# zhao-ui
-1.基于vue3和roullp打包器，gulp,tyscript的前端ui组件库
-2.。。。。。。。。。。。。。。。。。。。。。。
-
->>>>>>> f18ee12b298c3761dd9b798114d2a0df252f26db
