@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Zhao UI
 
 [![npm version](https://img.shields.io/npm/v/zhao-ui.svg?style=flat)](https://www.npmjs.com/package/zhao-ui)
@@ -52,3 +53,9 @@
 ## 🔍 使用示例
 
 ### Button 组件
+=======
+# zhao-ui
+1.基于vue3和roullp打包器，gulp,tyscript的前端ui组件库
+2.。。。。。。。。。。。。。。。。。。。。。。
+
+>>>>>>> f18ee12b298c3761dd9b798114d2a0df252f26db
