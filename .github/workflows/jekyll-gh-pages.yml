@@ -4,7 +4,7 @@ name: Deploy VitePress Docs to GitHub Pages
 on:
   # 当您推送代码到 main 或 master 分支时自动触发构建和部署
   push:
-    branches: [ main, master ]  # 可根据您的分支自行选择，比如只保留 main
+    branches: [master ]  # 可根据您的分支自行选择，比如只保留 main
 
   # 可选：允许手动在 GitHub Actions 页面运行此工作流
   workflow_dispatch:
