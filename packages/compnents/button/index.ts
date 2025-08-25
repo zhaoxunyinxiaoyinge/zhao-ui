@@ -9,7 +9,7 @@ export type { ButtonEmits, ButtonProps } from './src/types';
 
  const ZButton = Button as SFCWithInstall<typeof Button>;
 
-  ZButton.install=(app:App)=>{
+  ZButton.install=(app:App,options={})=>{
       app.component("ZButton",ZButton)
   }
 

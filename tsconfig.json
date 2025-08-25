@@ -11,7 +11,7 @@
     // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
 
     /* Language and Environment */
-    "target": "ESNext",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "target": "esnext",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "lib": ["ESnext","DOM"],                                       /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     "jsx": "preserve",                                /* Specify what JSX code is generated. */
     // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
@@ -23,7 +23,7 @@
     "noLib": false,  //不处理类库                               /* Disable including any library files, including the default lib.d.ts. */
     // "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
-    "typeRoots":  ["node_modules/@types"],
+    // "typeRoots":  ["node_modules/@types","dist/types/compnents"], //指定类型根目录，默认是node_modules/@types  这里添加了dist/types目录
     /* Modules */
     // "module": "ESNext",bug 在这里                         /* Specify what module code is generated. */
     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
@@ -105,7 +105,7 @@
   "exclude":[ //排除掉哪些类库
     "node_modules",
     "pay/**",
-    "dist/**",
+    // "dist/**",
     "packages/icons-vue/**",
     "build/**",
     "packages/**/node_modules",
@@ -115,7 +115,11 @@
   "packages/compnents/**/*.ts",
   "packages/compnents/**/*.tsx",
   "packages/compnents/**/*.vue",
-  "types/**/*.d.ts",
+  "types/*.d.ts",
   "pay/**/*.vue"
-, "pay/shimd.d.ts", "pay/src/demo/index.ts" ],
+, "pay/shimd.d.ts", 
+  "pay/src/demo/index.ts" ,
+  "dist/types/compnents/**/*.d.ts",
+  "dist/types/*.d.ts"
+  ]
 }

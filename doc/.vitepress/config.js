@@ -1,16 +1,25 @@
 module.exports = {
-    title: "zhao-ui",
+    title: "panda-ui",
     lastUpdated: true,
-    titleTemplate: false,
+    titleTemplate: true ,
+    appId:"zhao-ui",
     lang: 'zh-CN',
     description: 'Just playing around.',
     head: [['link', { rel: 'icon', href: '/fav.ico' }],["link",{ rel: 'preconnect', href: 'https://fonts.googleapis.com' }]],
     srcDir:".",
     markdown: {
-        theme: 'material-palenight',
+        // theme: 'material-palenight',
         lineNumbers: true
       },
       themeConfig: {
+      search: {
+      provider: 'local',
+      options:{
+        appId: '...',
+        apiKey: '...',
+        indexName: '...',
+      }
+    },
         outlineTitle:"页面导航",
         logo:"/timger.png",
         docsDir: 'docs',
@@ -51,7 +60,7 @@ module.exports = {
                         },
                         {
                             text: '快速开始',
-                            link: "/guide/getStart"
+                            link: "/guide/getStart.html"
                         },
                     ]
                 },
@@ -65,21 +74,43 @@ module.exports = {
                             { text: "button 按钮", link: '/component/button' },
                             { text: "link 链接", link: '/component/link' },
                             { text: "scrollbar 滚动", link: '/component/scrollbar' },
-                            { text: "card 卡片", link: '/component/card' },
                             {text:"layout布局",link:"/component/layout"},
                             {text:"text组件",link:"/component/text"},
+                            {text:"space组件",link:"/component/space"},
+                            {
+                                text:"container容器",
+                                link:"/component/container"
+                            }
                  
                         ] 
+                    },{
+                        text:"配置组件",
+                        items:[
+                            {
+                                text:"configProvide",
+                                link:"/component/configProvide"
+                            }
+                        ]
                     },
                     {
                         text:"表单组件",
                         items:[
                             {text:'input 组件',link:'/component/input'},
+                            {text:"checkbox 组件",link:'/component/checkbox'}
                         ]
                     },
                     {
                         text:"功能组件",
-                        items:[  {text:'start 星星评分',link:'/component/start'}]
+                        items:[ 
+                             { text: "card 卡片", link: '/component/card' },
+                            {text:'start 星星评分',link:'/component/start'},
+                        ]
+                    },
+                    {
+                        text:"表格组件",
+                        items:[
+                            {text:'table 组件',link:'/component/tabel'},
+                        ]
                     }
                 ]
             }
@@ -90,7 +121,7 @@ module.exports = {
 
         footer: {
             message: 'Released under the MIT License.',
-            copyright: 'Copyright © 2022-present 赵训银'
+            copyright: 'Copyright © 2025-present 赵训银'
         }
     }
 }

@@ -1,35 +1,44 @@
-.el-scroll {
-    overflow: auto;
+.el-scrollBar {
+    overflow: hidden;
     width: inherit;
-    height: 100%;
-
-    &::-webkit-scrollbar {
-        width: 8px;
-        border-radius: 10px;
-        background-color: transparent
+    position: relative;
+    .el-scrollBar__wrap {
+        overflow: auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
     }
 
-    &::-webkit-scrollbar-button {
-        width: 0;
-        height: 0;
+    .el-scrollBar__wrap::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Edge */
     }
 
-    &::-webkit-scrollbar-track {
-        height: auto;
-        width: 8px;
-    }
-
-    &::-webkit-scrollbar-track-piece {}
-
-    &:hover {
-        &::-webkit-scrollbar-thumb {
-            width: 8px;
-            height: 100px;
-            background-color: rgba(157, 156, 156,.6);
-            border-radius: 5px;
+    .is-horizontal {
+        height: 6px;
+        position: absolute;
+        left:2px;
+        right: 2px;
+        bottom: 2px;
+        .el-scrollbar__thumb{
+            position: relative;
+            height: 6px;
+            background-color: #ccccccc3;
+            border-radius: 4px;
         }
     }
-    &::-webkit-scrollbar-corner {}
 
-    &::-webkit-resizer {}
+    .is-vertical {
+        width: 6px;
+        position: absolute;
+        border-radius: 4px;
+        top:2px;
+        bottom: 2px;
+        right: 2px;
+          .el-scrollbar__thumb{
+            position: relative;
+            width:6px;
+            border-radius: 4px;
+            background-color: #ccccccc3;
+        }
+    }
 }
+

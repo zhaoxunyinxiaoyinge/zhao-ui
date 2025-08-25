@@ -1,7 +1,7 @@
-import type { ExtractPropTypes } from "vue";
+import type { ExtractPropTypes,PropType } from "vue";
 export const getPassProps = {
         icon:{
-            type:String,
+            type:String as PropType<string>,
             require:false,
             default:'default',
             value:"",

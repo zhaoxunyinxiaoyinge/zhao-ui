@@ -13,7 +13,7 @@
   "author": "zhaoxunyin",
   "license": "MIT",
   "description": "前端开发测试ui组件库",
-  "typings": "dist/types/packages/compnents/index.d.ts",
+  "typings": "types/compnents/index.d.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

@@ -1,20 +1,33 @@
-
-import type { ExtractPropTypes, PropType } from "vue";
-const  shadow=[
-    "always", "never", "hover"
-] as const;
-
-export const cardProps = {
-    shadow: {
-        type: String,
-        default:"always",
-        required: true
+import {StyleValue} from "vue"
+import type { CSSProperties, ExtractPropTypes, PropType } from "vue";
+export enum Shadow {
+           "always"='always', "never"='never', "hover"='hover' 
+    }
+export  const  CardProps={
+    header:{
+        type:String
     },
-    bodyStyle: {
-        type: Object as PropType<object>,
-        default: {},
-        required: false
+    footer:{
+        type:String
+
+    },
+    "body-style":{
+        type:String as PropType<StyleValue>
+    },
+    "header-class":{
+        type:String
+    },
+    "body-class":{
+        type:String
+    },
+    "footer-class":{
+        type:String
+    },
+    shadow:{
+      type:String as PropType<Shadow>,
+      default:"always"
     }
 }
 
-export type CardProps =ExtractPropTypes<typeof cardProps>;
+
+export type CardPropsType=ExtractPropTypes<typeof CardProps>

@@ -1,10 +1,10 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.createNamespace = void 0;
 /**
  * js 生成BEM 规范 (zhao__button--success);
  * author zhaoxunyin
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createNamespace = void 0;
 /**
  *
  * @param namespace
@@ -15,6 +15,7 @@ exports.createNamespace = void 0;
  * @returns
  */
 const namespace = 'el';
+// 完整的类型生成比如：el-button-group__icon--large
 function _bem(namespace, bolck, blockSuffix, element, modifier) {
     let cls = `${namespace}-${bolck}`;
     if (blockSuffix) {

@@ -1,6 +1,27 @@
 .el-col {
-  width: 100%;
-  &.el-col-1 {
-    
+  border-radius: 4px;
+}
+
+.is-guttered {
+  display: block;
+}
+
+//列的偏移量，动态计算 scss 函数表达式来写
+
+// 假设一行24列
+$col-count: 24;
+
+@for $i from 1 through $col-count {
+  .el-col-offset-#{$i} {
+    margin-left: (100% / $col-count) * $i;
+  }
+}
+// 假设一行24列动态计算函数表达式的值
+
+@for $i from 1 through $col-count {
+  .el-col-#{$i} {
+    display: block;
+    max-width: (100% / $col-count) * $i;
+    flex: 0 0 (100% / $col-count) * $i;
   }
 }

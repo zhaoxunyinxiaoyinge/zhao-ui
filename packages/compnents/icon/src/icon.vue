@@ -1,5 +1,5 @@
 <template>
-    <i class="iconfont" :class="[props.icon]">
+    <i class="iconfont" :class='["icon-"+props.icon]'>
         <slot></slot>
     </i>
 </template>

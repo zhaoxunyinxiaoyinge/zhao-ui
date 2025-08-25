@@ -1,7 +1,18 @@
 //设置所有属性的类型
 import type { ExtractPropTypes, PropType } from "vue";
 
+interface AutoSize {
+  minRows?: number, 
+  maxRows?: number
+}
+
 export const inputProps = {
+  minlength:{
+      type:[Number,String] as PropType<number|string>
+  },
+  maxlength:{
+      type:[Number,String] as PropType<number|string>
+  },
   type: {
     type: String,
     default: "text"
@@ -32,7 +43,7 @@ export const inputProps = {
   },
   rows: {
     type: Number,
-    default: 3
+    default: 1
   },
   prefixIcon: {
     type: String,
@@ -46,10 +57,6 @@ export const inputProps = {
     type: Boolean,
     default: false
   },
-  maxlength: {
-    type: Number,
-    default: 30
-  },
   name: {
     type: String,
     default: ""
@@ -60,6 +67,10 @@ export const inputProps = {
   size: {
     type: String,
     default: 'default'
+  },
+  autosize:{
+    type:[Boolean,Object] as PropType<AutoSize|boolean>,
+    default:false
   }
 }
 export type inputTypes = ExtractPropTypes<typeof inputProps>

@@ -13,12 +13,13 @@ export default defineComponent({
       if (!props.gutter) {
         return styles
       }
-      styles.marginRight = styles.marginLeft = `-${props.gutter / 2}px`
+      styles.marginLeft=styles.marginRight  = `-${props.gutter / 2}px`
       return styles
     });
     const rowKls = computed(() => {
       const nb = createNamespace("row");
       return [nb.b(),
+      // 如果不是默认的设置的值，会设置类名
       nb.is(`justify-${props.justify}`, props.justify !== 'start'),
       nb.is(`align-${props.align}`, props.align !== 'top'),
       ];
@@ -38,4 +39,4 @@ export default defineComponent({
   <component :is="props.tag" :class="rowKls" :style="style">
     <slot />
   </component>
-</template>./row
+</template>

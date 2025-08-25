@@ -3,6 +3,9 @@
  * js 生成BEM 规范 (zhao__button--success);
  * author zhaoxunyin
  */
+
+import { Style } from "util";
+
 /**
  * 
  * @param namespace 
@@ -13,6 +16,7 @@
  * @returns 
  */
 const namespace:string='el';
+// 完整的类型生成比如：el-button-group__icon--large
 
 function _bem(namespace: string, bolck: string,blockSuffix:string, element: string, modifier: string) {
     let cls=`${namespace}-${bolck}`;
@@ -99,8 +103,8 @@ function createBEM(block: string) {
         return styles
       }
       // with block
-      const cssVarBlock = (object: Record<string, string>) => {
-        const styles: Record<string, string> = {}
+      const cssVarBlock = (object:{[key:string]:any}) => {
+        const styles:Record<string, string> = {}
         for (const key in object) {
           if (object[key]) {
             styles[`--${namespace}-${block}-${key}`] = object[key]

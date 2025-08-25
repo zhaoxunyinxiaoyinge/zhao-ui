@@ -1,0 +1,24 @@
+
+/* 让所有表格无边框 */
+table {
+  width:100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+thead,tbody,tr {
+  display: block;
+}
+
+table tr {
+  display: flex;
+}
+
+table th,
+table td {
+  border: none;
+  display:inline-block;
+  flex:1;
+  text-align: left!important;
+  border: none !important;
+}

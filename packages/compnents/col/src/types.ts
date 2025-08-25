@@ -1,24 +1,12 @@
 import type { ExtractPropTypes } from "vue";
 import Col from "./col.vue";
 
-export const RowJustify = [
-    'start',
-    'center',
-    'end',
-    'space-around',
-    'space-between',
-    'space-evenly',
-  ] as const
-
-
-export const RowAlign = ['top', 'middle', 'bottom'] as const
-
 
 export const getPassProps = {
     span: {
         type: Number,
         require:false,
-        default:1
+        default:24
     },
 
     offset:{
@@ -31,9 +19,8 @@ export const getPassProps = {
     },
 
     pull: {
-        type: String,
-        validator:(val:typeof RowAlign[number])=>RowAlign.includes(val),
-        default: 'top',
+        type: Number,
+        default: 0,
       },
       xs:{
         type:[Number,Object],

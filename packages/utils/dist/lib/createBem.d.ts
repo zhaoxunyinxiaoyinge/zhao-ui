@@ -1,4 +1,8 @@
 /**
+ * js 生成BEM 规范 (zhao__button--success);
+ * author zhaoxunyin
+ */
+/**
  *
  * @param name
  * @returns 创建命名空间
@@ -13,7 +17,9 @@ declare function createNamespace(block: string): {
     bem: (blockSuffix?: string, element?: string, modifier?: string) => string;
     is: (name: string, state: boolean) => string;
     cssVar: (object: Record<string, string>) => Record<string, string>;
-    cssVarBlock: (object: Record<string, string>) => Record<string, string>;
+    cssVarBlock: (object: {
+        [key: string]: any;
+    }) => Record<string, string>;
     cssVarName: (name: string) => string;
     cssVarBlockName: (name: string) => string;
 };

@@ -12,6 +12,7 @@
  * @returns
  */
 const namespace = 'el';
+// 完整的类型生成比如：el-button-group__icon--large
 function _bem(namespace, bolck, blockSuffix, element, modifier) {
     let cls = `${namespace}-${bolck}`;
     if (blockSuffix) {

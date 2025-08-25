@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /guide/quieStart
+      link: /guide/getStart.html
 features:
   - icon: 🎉
     title: 组件库构建流程

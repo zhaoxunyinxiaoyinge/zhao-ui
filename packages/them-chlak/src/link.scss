@@ -10,60 +10,60 @@
     }
 
     &--default {
-        color: #333;
+        color: var(--link-default-color);
 
         &.is-underline:hover {
             box-sizing: border-box;
             border-bottom: 1px solid #000;
         }
         &.is-disabled {
-            color: fade-out(#333, .5);
+            color: var(--link-default-color-disabled);
         }
     }
 
 
     &--primary {
-        color: #409eff;
+        color: var(--link-primary-color);
 
         &.is-underline {
             &:hover {
                 box-sizing: border-box;
-                border-bottom: 1px solid #409eff;
+                border-bottom: 1px solid var(--link-primary-color);
             }
         }
 
         &.is-disabled {
-            color: fade-out(#409eff, .5);
+            color: var(--link-primary-color-disabled);
         }
     }
 
     &--success {
-        color: #67C23A;
+        color: var(--link-success-color);
 
         &.is-underline {
             &:hover {
                 box-sizing: border-box;
-                border-bottom: 1px solid #67C23A;
+                border-bottom: 1px solid var(--link-success-color);
             }
         }
 
         &.is-disabled {
-            color: fade-out(#67C23A, .5);
+            color: var(--link-success-color-disabled);
         }
     }
 
     &--warning {
-        color: rgba(238, 206, 102);
+        color: var(--link-warning-color);
 
         &.is-underline {
             &:hover {
                 box-sizing: border-box;
-                border-bottom: 1px solid rgba(238, 206, 102);
+                border-bottom: 1px solid var(--link-warning-color);
             }
         }
 
         &.is-disabled {
-            color: fade-out(rgba(238, 206, 102), .5);
+            color: var(--link-warning-color-disabled);
         }
 
         a {
@@ -77,37 +77,36 @@
     }
 
     &--danger {
-        color: #f56c6c;
+        color:var(--link-danger-color);
 
         &.is-underline {
             &:hover {
                 box-sizing: border-box;
-                border-bottom: 1px solid #f56c6c;
+                border-bottom: 1px solid var(--link-danger-color);
             }
         }
 
         &.is-disabled {
-            color: fade-out(#f56c6c, .5);
+            color: var(--link-danger-color-disabled);
         }
 
 
     }
 
     &--info {
-        color: #a5a5a5;
-        color: #a5a5a5;
+        color: var(--link-info-color);
+        color: var(--link-info-color);
 
         &.is-underline {
             &:hover {
                 box-sizing: border-box;
-                border-bottom: 1px solid #a5a5a5;
+                border-bottom: 1px solid var(--link-info-color);
             }
         }
 
         &.is-disabled {
-            color: fade-out(#a5a5a5, .5);
+            color: var(--link-info-color-disabled);
         }
-
 
     }
 }

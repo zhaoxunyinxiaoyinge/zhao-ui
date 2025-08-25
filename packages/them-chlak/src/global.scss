@@ -1,0 +1,260 @@
+
+:root {
+  // 颜色变量
+  $color-black: black;
+  $color-danger: red;
+  $color-info: #a5a5a5;
+  $color-success: green;
+  $color-warning: orange;
+  $color-default: #333;
+  $color-primary: #409eff;
+
+  // 边框变大小变量
+  $border-width: 1px;
+  $border-dansh: "dansh";
+  $border-solid: "solid";
+
+  // 圆角变量
+  $border-radius-none: 0px;
+  $border-radius-litte: 3px;
+  $border-radius-normal:5px;
+
+
+  // 外边距和内边距
+  $padding-base: 5px;
+  $padding-8: 8px;
+  $padding-10: 10px;
+  $padding-15: 15px;
+  $padding-13: 13px;
+  $padding-20: 20px;
+  $padding-16: 16px;
+  $padding-30: 30px;
+  $padding-28: 28px;
+
+  $margin-8: 8px;
+  $margin-10: 10px;
+  $margin-15: 15px;
+  $margin-13: 13px;
+  $margin-20: 20px;
+  $margin-16: 16px;
+  $margin-30: 30px;
+  $margin-28: 28px;
+
+
+  // 字体大小
+  $font-size-base: 16px;
+  $font-size-small: 12px;
+  $font-size-large: 18px;
+
+
+  //阴影
+  $box-shadow-base-x: 1px;
+  $box-shadow-base-y: 1px;
+  $box-shadow-base-bg: #eee;
+
+  // 背景
+  $bg: #fff;
+
+  //全局字体颜色
+  --font-color-light:#{$color-black};
+
+  //按钮全局变量 颜色，大小
+  --button-primary-color: #{$color-primary};
+  --button-warning-color: #{$color-warning};
+  --button-danger-color: #{$color-danger};
+  --button-info-color: #{$color-info};
+  --button-default-color: #{$color-default};
+  --button-success-color: #{$color-success};
+
+  --button-primary-color-light:#{rgba($color-primary, .5)};
+  --button-success-color-light:#{rgba($color-success, 60%)};
+  --button-danger-color-light:#{rgba($color-danger, 60%)};
+  --button-warning-color-light:#{rgba($color-warning, 60%)};
+  --button-info-color-light:#{rgba($color-info, 60%)};
+
+  --button-size-small-horize: #{$padding-10};
+  --button-size-small-vecity: #{$padding-8};
+  --button-size-meidum-horize: #{$padding-15};
+  --button-size-meidum-vecity: #{$padding-13};
+  --button-size-large-horize: #{$padding-20};
+  --button-size-large-vecity: #{$padding-16};
+
+  --button-font-small: #{$font-size-small};
+  --button-font-meidum: #{$font-size-base};
+  --button-font-large: #{$font-size-large};
+
+  --button-border-solid: #{$border-solid};
+  --button-border-dansh: #{$border-dansh};
+  --button-border-width: #{$border-width};
+  --button-border-color:white;
+
+  --button-plain-border-parimary-color:#{$color-primary};
+  --button-plain-border-danger-color:#{$color-danger};
+  --button-plain-border-warning-color:#{$color-warning};
+  --button-plain-border-success-color:#{$color-success};
+  --button-plain-border-info-color:#{$color-info};
+
+   --button-plain-border-parimary-bg:rgba(#{$color-primary}, 0%);
+  --button-plain-border-danger-bg:rgba(#{$color-danger}, 0%);
+  --button-plain-border-warning-bg:rgba(#{$color-warning}, 0%);
+  --button-plain-border-success-bg:rgba(#{$color-success}, 0%);
+  --button-plain-border-info-bg:rgba(#{$color-info}, 0%);
+
+  --button-borer-raduis-litte: #{$border-radius-litte};
+  --button-border-raduis-none: #{$border-radius-none};
+  --button-border-raduis-normal:#{$border-radius-normal};
+  --button-border-raduis-cirle:50%;
+  --button-border-raduis-round:4em;
+
+  --button-disabled-opacity: 0.5;
+
+  // link 全局变量
+
+  --link-primary-color: #{$color-primary};
+  --link-primary-color-light: #{rgba($color-primary, .5)};
+  --link-primary-color-hover: #{$color-primary};
+  --link-primary-color-active: #{$color-primary};
+  --link-primary-color-disabled: #{rgba($color-primary, 0.5)};
+
+  --link-info-color: #{$color-info};
+  --link-info-color-light: #{rgba($color-info, .5)};
+  --link-info-color-hover: #{$color-info};
+  --link-info-color-active: #{$color-info};
+  --link-info-color-disabled: #{rgba($color-info, 0.5)};
+
+  --link-success-color: #{$color-success};
+  --link-success-color-light: #{rgba($color-success, .5)};
+  --link-success-color-hover: #{$color-success};
+  --link-success-color-active: #{$color-success}; 
+  --link-success-color-disabled: #{rgba($color-success, 0.5)};
+
+  --link-warning-color: #{$color-warning};
+  --link-warning-color-light: #{rgba($color-warning, .5)};
+  --link-warning-color-hover: #{$color-warning};
+  --link-warning-color-active: #{$color-warning};
+  --link-warning-color-disabled: #{rgba($color-warning, 0.5)};
+
+  --link-danger-color: #{$color-danger};
+  --link-danger-color-light: #{rgba($color-danger, .5)};
+  --link-danger-color-hover: #{$color-danger};
+  --link-danger-color-active: #{$color-danger};
+  --link-danger-color-disabled: #{rgba($color-danger, 0.5)};
+
+  --link-default-color: #{$color-default};
+  --link-default-color-light: #{rgba($color-default, .5)};
+  --link-default-color-hover: #{$color-default};
+  --link-default-color-active: #{$color-default}; 
+  --link-default-color-disabled: #{rgba($color-default, 0.5)};
+  --link-opacity: 0.5;
+
+  --text-primary-color:#{$color-primary};
+  --text-danger-color:#{$color-danger};
+  --text-warning-color:#{$color-warning};
+  --text-success-color:#{$color-success};
+  --text-info-color:#{$color-info};
+  --text-color:#{$color-black};
+
+  --text-small-size:#{$font-size-small};
+  --text-large-size:#{$font-size-large};
+  --text-default-size:#{$font-size-base};
+}
+
+
+// 媒体查询 xs,sm ,md,lg,xl
+//xs超小屏幕
+@media (max-width: 576px) {
+  .hidden-xs-only {
+    display: none !important;
+  }
+  .hidden-sm-and-down {
+    display: none !important;
+  }
+
+  .hidden-md-and-down {
+    display: none !important;
+  }
+  .hidden-lg-and-down {
+  display: none !important;
+  }
+}
+
+//smd小屏幕
+@media (min-width: 576px) and (max-width: 768px) {
+  .hidden-sm-only{
+    display: none !important;
+  }
+  .hidden-sm-and-down {
+    display: none !important;
+  }
+  .hidden-sm-and-up {
+    display: none !important;
+  }
+
+  .hidden-md-and-down {
+    display: none !important;
+  }
+
+  .hidden-lg-and-down {
+  display: none !important;
+  }
+}
+
+//md中等屏幕
+@media (min-width: 768px) and (max-width: 992px) {
+    .hidden-sm-and-up {
+    display: none !important;
+  }
+  .hidden-md-only{
+    display: none !important;
+  }
+
+  .hidden-md-and-down {
+    display: none !important;
+  }
+  .hidden-md-and-up{
+    display: none !important;
+  }
+
+  .hidden-lg-and-down {
+  display: none !important;
+  }
+}
+
+//lg大屏幕
+@media (min-width: 992px) and (max-width: 1200px) {
+    .hidden-sm-and-up {
+    display: none !important;
+  }
+  .hidden-md-and-up{
+    display: none !important;
+  }
+  .hidden-lg-only {
+    display: none !important;
+  }
+
+.hidden-lg-and-down {
+  display: none !important;
+  }
+
+.hidden-lg-and-up {
+  display: none !important;
+  }
+}
+
+//xl超大屏幕
+@media (min-width: 1200px) {
+    .hidden-sm-and-up {
+    display: none !important;
+  }
+  .hidden-md-and-up {
+    display: none !important;
+  }
+
+  .hidden-lg-and-up {
+    display: none !important;
+  }
+
+  .hidden-xl-only {
+    display: none !important;
+  }
+}

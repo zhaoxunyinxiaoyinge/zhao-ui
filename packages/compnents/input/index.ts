@@ -1,12 +1,11 @@
-import input from "./src/index.vue";
 import type { App, Plugin } from "vue";
+import Input from "./src/index.vue";
 
-export  type  ZInputInstance= InstanceType<typeof input>;
+export  type  ZInputInstance= InstanceType<typeof Input>;
 export type SFCWithInstall<T> = T & Plugin;
-const ZInput=input as SFCWithInstall<typeof input>
-
+const ZInput=Input as SFCWithInstall<typeof Input>
  ZInput.install = (app:App)=>{
-    app.component("ZInput", input);
+    app.component("ZInput", Input);
   } 
 export type {inputTypes} from "./src/types";
 export {

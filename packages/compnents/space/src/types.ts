@@ -5,14 +5,15 @@ interface alignment {
     alignments: "center" | "normal" | "stretch"
 }
 
-type arr = [
+const  sizeMap = [
     "large",
     "default",
     "small"
-]
+] as const ;
 
 export  {
-    alignment
+    alignment,
+    sizeMap
 }
 
 export const spaceProps = {
@@ -41,8 +42,8 @@ export const spaceProps = {
     },
 
     size: {
-        type: String as PropType<string> | object as  PropType<Array<number>>,
-        default: "",
+        type: String as PropType<keyof typeof sizeMap> | object as  PropType<Array<number>>,
+        default: "small",
         required: false
     },
 
@@ -67,6 +68,11 @@ export const spaceProps = {
         type:String  as PropType<string>,
         default:"",
         required:false
+    },
+    separator: {
+        type: String as PropType<string>,
+        default: "",
+        required: false
     }
 
 }

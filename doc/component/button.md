@@ -13,18 +13,18 @@ lastUpdated: 1729432579233
     const type=ref<string>('primary');
 </script>
 <template> 
-    <z-button :type='type' :size='size' icon="icon-add">组件按钮</z-button>
+    <z-button :type='type' :size='size' icon="edit">组件按钮</z-button>
 </template>
 ```
 ## 图标类型
-<z-button  type='primary'  icon='icon-add' size='default'>正常按钮</z-button>
+<z-button  type='primary'  icon='edit' size='default'>正常按钮</z-button>
 <z-button type='danger' size='default'  loading  >危险按钮</z-button>
 <z-button type='success' size='default' icon="icon-bottom">成功按钮</z-button>
 <z-button type='warning' size='default' icon="icon-bad">警告按钮</z-button>
 <z-button type='info' size='default' icon="icon-comment">通知按钮</z-button>
 
 <div style="margin:20px 0">
-    <z-button type='default' size='default' icon="icon-direction-up">默认按钮</z-button>
+    <z-button type='default' size='default' icon="icon-icon-test3">默认按钮</z-button>
 </div>
 
 
@@ -51,7 +51,7 @@ lastUpdated: 1729432579233
 <script lang='ts' setup>
 </script>
 <template> 
-    <z-button type="primary"  plain icon="icon-add">组件按钮</z-button>
+    <z-button type="primary"  plain icon="icon-icon-test">组件按钮</z-button>
     <z-button type='danger'  plain>危险按钮</z-button>
     <z-button type='success' plain >成功按钮</z-button>
     <z-button type='warning'  plain>警告按钮</z-button>
@@ -102,10 +102,28 @@ lastUpdated: 1729432579233
 <z-button type='info' plain size='default' :disabled='true'>通知按钮</z-button>
 <z-button type='default' plain size='default' :disabled='true'>默认按钮</z-button>    
 
+## 自定义标签按钮
+``` vue 
+    <script lang='ts' setup>
+</script>
+<template> 
+    <z-button type="primary" tag='div'  disabled plain icon="icon-add" round>组件按钮</z-button>
+    <z-button type='danger' tag='a' disabled  plain cirle>危险按钮</z-button>
+    <z-button type='success' tag='button' disabled plain  round>成功按钮</z-button>
+    <z-button type='warning' tag='div'  disabled plain cirle>警告按钮</z-button>
+</template>
+
+```
+ <z-button type="primary" tag='div'  disabled  >
+        组件按钮</z-button>
+    <z-button type='danger' tag='a'  href='http//:www.baidu.com' target='blank' >危险按钮</z-button>
+    <z-button type='success' tag='button' disabled >成功按钮</z-button>
+    <z-button type='warning' tag='div'  disabled  >警告按钮</z-button>
+
 ## 属性
 | mame        | 属性           |默认值  |
 | ------------:|:-------------:| -----:|
-| 尺寸 | size | small|
+ 尺寸 | size | small
 | 类型 | type     | default |
 | 是否空白 | plain |false |
 | 圆角   | cirle  | false|

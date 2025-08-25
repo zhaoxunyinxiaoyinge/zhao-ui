@@ -1,0 +1,124 @@
+.el-check-box {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+
+  &.is-checked {
+    .el-check-box__label {
+      color: #409eff;
+    }
+  }
+
+  &.is-border {
+      padding: 5px 14px;
+      border:1px solid #ccc;
+      border-radius: 5px;
+      &:hover {
+        border-color: #409eff;
+        transition: all 0.8s ease-in-out;
+      }
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+      &:hover {
+        border-color: #ccc;
+      }
+    .el-check-box__label {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.el-check-box__input {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 0px 1px #ccc inset;
+  border-radius: 3px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -2px;
+    border: 1px solid transparent;
+    transform: rotate(45deg);
+    transform-origin: center;
+
+  }
+
+  &.is-checked {
+    background-color: #409eff;
+    box-shadow: 0px 0px 0px 1px #409eff inset;
+
+    &::after {
+      transition: transform 0.5s ease-in-out;
+      border-right-color: #fff;
+      border-bottom-color: #fff;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 0px 1px #409eff inset;
+    transition: box-shadow 0.8s ease-in-out;
+  }
+
+  &.is-disabled {
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 0px 1px #e6e6e6 inset;
+    cursor: not-allowed;
+
+    &.is-checked {
+      background-color: #f5f5f5;
+      &::after {
+      border-right-color: #ccc;
+      border-bottom-color: #ccc;
+    }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 0px 1px #e6e6e6 inset;
+      transition: box-shadow 0.8s ease-in-out;
+    }
+  }
+
+  &.is-indeterminate {
+    box-shadow: none;
+    background-color: #409eff;
+    &::after {
+    border-top-color: #fff;
+    width: 5px;
+    top: 50%;
+    margin-top: 0px;
+    transform: rotate(0);
+    }
+  }
+
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    outline: none;
+    opacity: 0;
+  }
+
+}
+
+
+
+
+
+.el-check-box__label {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+}

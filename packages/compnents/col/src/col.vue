@@ -8,8 +8,12 @@ export default defineComponent({
   name: "ElCol",
   props: getPassProps,
   setup(props) {
+    //获取从row组件传入的gutter
+    // 这里使用了类型断言，确保rowContextKey的类型是InjectionKey
     const { gutter } = inject<InjectionKeyRow>(rowContextKey) as InjectionKeyRow;
     const nb = createNamespace('col');
+
+    //生成的style对象直接作用于该组件上
     const style = computed(() => {
       const styles: CSSProperties = {}
       if (gutter.value) {
@@ -23,10 +27,11 @@ export default defineComponent({
       const pos = ['span', 'offset', 'pull', 'push'] as const
 
       pos.forEach((prop) => {
-        const size = props[prop]
+        const size = props[prop] 
         if (isNumber(size)) {
+          //如果是span属性传入的
           if (prop === 'span') classes.push(nb.b(`${props[prop]}`))
-          else if (((size as string).length ) > 0) classes.push(nb.b(`${prop}-${props[prop]}`))
+          else if (size > 0) classes.push(nb.b(`${prop}-${props[prop]}`))
         }
       })
 

@@ -1,7 +1,8 @@
-import type { ExtractPropTypes } from "vue";
+import type { ExtractPropTypes,PropType } from "vue";
 export const getPassProps = {
     height:{
-        type:Number,String
+        type:[Number,String] as PropType<number | string>,
+        default: "400px"
     },
     maxHeight:{
         type:Number,String
@@ -28,7 +29,8 @@ export const getPassProps = {
     },
 
     tag:{
-        type:String
+        type:String,
+        default:"div"
     },
     "always":{
         type:Boolean

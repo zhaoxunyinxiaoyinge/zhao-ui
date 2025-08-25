@@ -1,4 +1,4 @@
-import type { ExtractPropTypes } from "vue";
+import type { ExtractPropTypes,PropType} from "vue";
 
 
 export const sizes =[
@@ -22,18 +22,18 @@ export const textProps={
     default:"span"
   },
   size:{
-    type:String,
-    validator:(_val:typeof sizes[number])=>sizes.includes(_val),
+    type:String as PropType<"large"|"default"|"small">,
     default:"default"
   },
   type:{
-    type:String,
-    validator:(_val:typeof types[number])=>types.includes(_val),
-    default:"info"
+    type:String as PropType<"primary" |"default"|"warning"|"info"|"success">
   },
   truncated:{
     type:Boolean,
     default:false
+  },
+  "line-clamp":{
+    type:[Number,String]
   }
 
 }

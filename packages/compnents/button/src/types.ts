@@ -4,6 +4,10 @@ export type ButtonType = 'default' | 'primary' | 'success' | 'warning' | 'danger
 export type ButtonSize = 'large' | 'default' | 'small'
 
 export const getPassProps = {
+    tag:{
+        type:String as PropType<'button' | 'a' | 'div'>,
+        default: 'button'
+    },
     type: {
         type: String as PropType<ButtonType>,
         default: 'default',
@@ -22,7 +26,11 @@ export const getPassProps = {
         type: String,
         default: ''
     },
-    disabled: Boolean,
+    disabled: {
+        type:Boolean,
+        default:false
+        
+    }
  
 } as const
 

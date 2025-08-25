@@ -8,6 +8,7 @@ import vue from "rollup-plugin-vue";
 import path from "path"
 import VueSetupExtend from 'unplugin-vue-setup-extend/rollup';
 
+
 const pkg = require(path.resolve( 'package.json'));
 const outpoutConfig = {
   "esm-bundler": {
@@ -23,14 +24,16 @@ const outpoutConfig = {
 function createBuild(format, output) {
   output.sourcemap = true
   output.exports = 'named';
-  return {
+  return{
     input: path.resolve("../../", 'packages/compnents/index.ts'),
     external: ['vue'],
     output,
     cache: false,
     plugins: [
-      VueSetupExtend(),
       vue(),
+      VueSetupExtend({
+        name:false
+      }),
       typescript(
           {tsconfig:"./tsconfig.json"
           }
@@ -49,4 +52,5 @@ function createBuild(format, output) {
 }
 
 
-export default pkg.buildoption.format.map((item) => createBuild(item, outpoutConfig[item]))
+
+export default pkg.buildoption.format.map((item) => createBuild(item, outpoutConfig[item]));

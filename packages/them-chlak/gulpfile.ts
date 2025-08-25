@@ -11,12 +11,12 @@ console.log("打包样式")
 const complie = () => {
     const sass = gulpSass(dartSass);
     
-    return src(path.resolve(__dirname, "./src/*.scss")).pipe(sass.sync()).pipe(autoprefixer()).pipe(cleanCss()).
+    return src(path.resolve(__dirname, "./src/*.{css,scss}")).pipe(sass.sync()).pipe(autoprefixer()).pipe(cleanCss()).
         pipe(dest("./dist/css"))
     }
 
 const copy = () => {
-    return src(path.resolve(__dirname, "./src/font/**")).pipe(dest('./dist/font'))
+    return src("./src/font/**").pipe(dest('./dist/font'))
 }
 
 const copyStyle = () => {

@@ -44,7 +44,9 @@ export default defineComponent({
 
       handleMouseEnter,
       handlechecked,
-      restoreScore
+      restoreScore,
+
+      props
     }
   }
 })
@@ -55,9 +57,12 @@ export default defineComponent({
   <div style="display:flex;align-items: center;">
     <div v-for="item in maxValue" :key="item" class="iconfont  star-item star-placeholder"
       @mouseenter="handleMouseEnter(item)" @mouseleave="restoreScore" @mousedown="handlechecked(item)">
-      <div class="iconfont  star-item" :style="{ color: activeColor }" v-if="item > mytempscore">
-        &#xe616;</div>
-      <div class="iconfont star-item" :style="{ color: activeColor }" v-else>&#xe60d;</div>
+      <div class="iconfont  " :style="{ color: props.activeColor}" v-if="item > mytempscore">
+          <z-icon icon="star"></z-icon>
+      </div>
+      <div class="iconfont icon-icon-test7" :style="{ color: props.activeColor }" v-else>
+        <z-icon icon="star_filled"></z-icon>
+      </div>
     </div>
     <span>
       {{ mytempscore }}

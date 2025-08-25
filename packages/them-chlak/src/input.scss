@@ -1,103 +1,170 @@
-.input {
+.el-input {
     display: flex;
+    box-sizing: border-box;
     align-items: center;
     width: 100%;
-    .input__inner {
-        &.input__default {
-            height: 36px;
-            line-height: 36px;
-        }
-
-        &.input__large {
-            height: 42px;
-            line-height: 42px;
-        }
-
-        &.input__small {
-            height: 32px;
-            line-height: 32px;
-        }
-        width: 100%;
-        display: flex;
-        align-items: center;
-
-        height: 36px;
-        line-height: 36px;
-        box-sizing: border-box;
-        .input__inner-wrap {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
-
-            .input__inner-wrap-input {
-                border: none;
-                border: 1px solid #ccc;
-
-                &:focus {
-                    border-color: #409eff;
-                    transition: all .2s ease;
-                    box-shadow: 0px 0px 0px .5px inset #409eff;
-                    ;
-                }
-                padding: 0 5px;
-                display: block;
-                box-sizing: border-box;
-                width: 100%;
-                height: 100%;
-                outline: 0;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+   &.is-disabled{
+        cursor: not-allowed;
+        .el-input__wrapper {
+            background-color: #f5f7fa;
+            box-shadow: 0 0 0 1px #e4e7ed inset;
+            cursor: not-allowed;
+            .el-input__inner  {
+                cursor: not-allowed;
             }
         }
+   }
+}
 
-        .input__inner-prepend,
-        .input__inner-append {
-            box-sizing: border-box;
-            padding: 0 15px;
-            background-color: #F5F7Fa;
-            color: #909399;
-            font-size: 14px;
-            border: 1px solid #ccc;
-            line-height: 36px;
-            height: 36px;
-        }
+.el-input-group {
+    display: inline-flex;
+    width: 100%;
+    align-items: stretch;
+}
 
-        .input__inner-prepend {
-            border-right: none;
-        }
-
-        .input__inner-append {
-            border-left: none;
-        }
-
+.el-input__wrapper {
+    padding: 1px 11px;
+    display: inline-flex;
+    flex-grow: 1;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #c0c4cc inset;
+    flex:auto;
+    &.is-focus {
+        box-shadow: 0 0 0 1px #409eff inset;
+        transition: all .5s linear;
     }
 
-    .input__textarea {
-        position: relative;
+    .el-input__inner {
         width: 100%;
-    }
-
-    #textarea {
-        border: 1px solid #ccc;
-        display: flex;
-        align-items: flex-start;
-        width: 100% !important;
+        height: calc(32px - 2px );
+        flex-grow: 1;
         box-sizing: border-box;
-        text-align: left;
-        padding: 2px 3px;
-        outline: none;
-        border-radius: 5px;
-
-        &:focus {
-            border: none;
-            box-shadow: 0 0 0 1px #409eff inset;
-            transition: all .2s ease;
-        }
     }
 
-    .text-count {
+     .el-input__suffix,.el-input__prefix {
+            display: inline-flex;
+            height: inherit;
+            flex-shrink: 0;
+            white-space: nowrap;
+            text-align: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            color:#a8abb2;
+            pointer-events: all;
+            .el-input__suffix-inner,.el-input__prefix-inner {
+                pointer-events: all;
+                display:inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .el-icon {
+                display: flex;
+                width:1em ;
+                height: 1em;
+                justify-content: center;
+                align-items: center;
+                margin-left: 8px;
+                cursor: pointer;
+  
+            }
+        }
+}
+
+.el-input__suffix-inner {
+    .el-input__count-inner {
         font-size: 12px;
-        position: absolute;
-        bottom: -5px;
-        right: 10px
     }
 }
+
+.el-input__prefix-inner {
+    .icon__prefix-icon {
+        // width: 1em;
+        // height: 1em;
+        margin-right: 8px;
+        color:rgb(168, 171, 178)
+    }
+}
+
+.el-textarea {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 14px;
+    .el-textarea__count {
+        color: var(--el-color-info,#909399);
+        background: var(--el-fill-color-blank,#fff);
+        position: absolute;
+        font-size: 12px;
+        line-height: 14px;
+        bottom: 5px;
+        right: 10px;
+    }
+}
+
+.el-textarea__inner {
+    display: block;
+    padding:5px 11px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--bg-color,#fff);
+    box-shadow: 0 0 0 1px #c0c4cc;
+    resize: vertical;
+    line-height:1.5 ;
+    border-radius: 4px;
+    border: none;
+    &.is-focus {
+        box-shadow: 0 0 0 1px #409eff;
+        transition: all .5s linear;
+    }
+
+    
+}
+
+
+.el-input-group__append, .el-input-group__prepend {
+    background-color: #f5f7fa;
+    color: #909399;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    border-radius: var(--el-input-border-radius,4px);
+    padding: 0 20px;
+    white-space: nowrap;
+
+}
+
+.el-input-group__prepend {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 1px 0 0 0 #dcdfe6 inset, 0 1px 0 0 #dcdfe6 inset, 0 -1px 0 0 #dcdfe6 inset
+}
+
+.el-input-group__append {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: -1px 0 0 0 #dcdfe6 inset, 0 1px 0 0 #dcdfe6 inset, 0 -1px 0 0 #dcdfe6 inset
+}
+
+.el-input-group--append {
+        .el-input__wrapper {
+            border-right: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+}
+.el-input-group--prepend {
+     .el-input__wrapper {
+            border-left: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+} 

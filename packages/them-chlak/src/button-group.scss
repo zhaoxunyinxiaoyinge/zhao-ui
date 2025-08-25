@@ -1,0 +1,13 @@
+.button-group {
+  display: flex;
+  .el-button{
+    border-left: 1px solid #d4d7de;
+    margin-right: 0 !important;
+    border-radius:0px 5px 5px 0 ;
+  }
+  .el-button:nth-child(1){
+    margin-right: 0;
+    border-left: none;
+    border-radius: 5px 0 0 5px;
+  }
+}
