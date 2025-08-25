@@ -8,9 +8,9 @@
   "scripts": {
     "dev": "pnpm -C pay dev",
     "build": "npx gulp -f ./build/gulpfile.ts",
-    "doc": "pnpm -C doc dev",
-    "build:doc":"pnpm -c doc build",
-     "publish": "npx gulp -f  ./packages/script/gulpfile.ts",
+    "doc": "pnpm -c docs dev",
+    "build-doc": "pnpm -c docs build",
+    "publish": "npx gulp -f  ./packages/script/gulpfile.ts",
     "test": "vitest",
     "build:types": "npx vue-tsc --declaration --emitDeclarationOnly"
   },

@@ -1,0 +1,15 @@
+# .github/workflows/deploy-docs.yml
+name: Deploy VitePress Docs to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]  # 或 master，根据您的分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup No
