@@ -1,30 +1,22 @@
-# .github/workflows/deploy-docs.yml
 name: Deploy VitePress Docs to GitHub Pages
 
 on:
-  # 当您推送代码到 main 或 master 分支时自动触发构建和部署
   push:
-    branches: [master ]  # 可根据您的分支自行选择，比如只保留 main
-
-  # 可选：允许手动在 GitHub Actions 页面运行此工作流
+    branches: [ master ]  # 或者 main，根据您的分支来定
   workflow_dispatch:
 
-# 设置权限：允许部署到 GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 避免并发部署（推荐，防止覆盖）
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # 第一步：构建 VitePress 文档
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: 🛎️ Checkout 代码
         uses: actions/checkout@v4
@@ -32,7 +24,7 @@ jobs:
       - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18  # 推荐使用 18，与 VitePress 兼容性好
+          node-version: 18
 
       - name: 📦 安装项目依赖（如果有）
         run: npm install
@@ -40,12 +32,11 @@ jobs:
       - name: 🏗️ 构建 VitePress 文档（文档源在 docs/ 目录）
         run: npx vitepress build docs
 
-      - name: 📤 上传构建结果（即 docs/.vitepress/dist/）作为 Pages Artifact
+      - name: 📤 上传构建结果（即 docs/.vitepress/dist/）
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/.vitepress/dist  # ✅ 重点：这是 VitePress 构建出的静态网站目录
+          path: ./docs/.vitepress/dist  # VitePress 构建出的静态网站目录
 
-  # 第二步：部署到 GitHub Pages
   deploy:
     needs: build
     runs-on: ubuntu-latest

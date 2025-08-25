@@ -2,6 +2,7 @@ module.exports = {
     title: "panda-ui",
     lastUpdated: true,
     titleTemplate: true ,
+    base:"/panda-ui/",
     appId:"zhao-ui",
     lang: 'zh-CN',
     description: 'Just playing around.',
