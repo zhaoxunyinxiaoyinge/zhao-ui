@@ -2,7 +2,7 @@ name: Deploy VitePress Docs to GitHub Pages
 
 on:
   push:
-    branches: [ master ]  # 或者 main，根据您的分支来定
+    branches: [ main, master ]
   workflow_dispatch:
 
 permissions:
@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: 🛎️ Checkout 代码
         uses: actions/checkout@v4
@@ -26,16 +27,21 @@ jobs:
         with:
           node-version: 18
 
-      - name: 📦 安装项目依赖（如果有）
-        run: npm install
+      - name: ⚙️ Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8  # 或者您项目中使用的 pnpm 版本，比如 7、8、9
 
-      - name: 🏗️ 构建 VitePress 文档（文档源在 docs/ 目录）
+      - name: 📦 使用 pnpm 安装依赖
+        run: pnpm install
+
+      - name: 🏗️ 构建 VitePress 文档（位于 docs/ 目录）
         run: npx vitepress build docs
 
-      - name: 📤 上传构建结果（即 docs/.vitepress/dist/）
+      - name: 📤 上传构建结果（dist 目录）
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/.vitepress/dist  # VitePress 构建出的静态网站目录
+          path: ./docs/.vitepress/dist
 
   deploy:
     needs: build
