@@ -8,4 +8,5 @@ var Lang;
 const rowContextKey = Symbol("rowContextKey");
 const configKey = Symbol("");
 const globalconfig = Symbol("");
-export { rowContextKey, configKey, globalconfig, };
+const checkboxgroupConfig = Symbol("");
+export { rowContextKey, configKey, globalconfig, checkboxgroupConfig };

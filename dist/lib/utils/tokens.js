@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.globalconfig = exports.configKey = exports.rowContextKey = void 0;
+exports.checkboxgroupConfig = exports.globalconfig = exports.configKey = exports.rowContextKey = void 0;
 ;
 // 全局配置，传入key类型
 var Lang;
@@ -14,3 +14,5 @@ const configKey = Symbol("");
 exports.configKey = configKey;
 const globalconfig = Symbol("");
 exports.globalconfig = globalconfig;
+const checkboxgroupConfig = Symbol("");
+exports.checkboxgroupConfig = checkboxgroupConfig;

@@ -13,7 +13,7 @@
     ]
    },
   "scripts": {
-    "rollup":"rollup --config rollup.config.js -w --bundleConfigAsCjs"
+    "rollup":"rollup --config rollup.config.js  --bundleConfigAsCjs"
   },
   "keywords": [],
   "author": "",

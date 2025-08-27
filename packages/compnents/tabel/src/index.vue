@@ -71,7 +71,7 @@ console.log(  props.rowClassName({},1), 'props.rowClassName');
         <table>
           <colgroup>
             <template v-for="(item, index) in children" :key="index" :name="`table-column-${ index }`"    :style="{width: item.props?.width? item.props.width+'px' : 'auto'}">
-                <col v-if="item.props.width"   :style="{ width: item.props?.width }"></col>
+                <col v-if="item.props?.width"   :style="{ width: item.props?.width }"></col>
                 <col v-else></col>
               </template>
             </col>
@@ -80,7 +80,7 @@ console.log(  props.rowClassName({},1), 'props.rowClassName');
             <!-- 这里新增单选和多选选择框 -->
             <tr>
               <td v-for="(item, index) in children" :key="index">
-                <div class="cell" v-if="item.props.type=='selection'">
+                <div class="cell" v-if="item.props?.type=='selection'">
                    <input type="checkbox" name="all" value="Bike"/>
                 </div>
                 <div v-else class="cell">
@@ -101,10 +101,10 @@ console.log(  props.rowClassName({},1), 'props.rowClassName');
           </colgroup>
           <tbody>
             <!-- 这里新增选择框 -->
-            <tr :key="rowIndex" v-for="(val, rowIndex) in props.data"  :class="[typeof props.rowClassName==='function'?  props.rowClassName({row:val,rowIndex:rowIndex}) : props['row-class-name']]">
+            <tr :key="rowIndex" v-for="(val, rowIndex) in props.data"  :class="[typeof props.rowClassName==='function'?  props.rowClassName(val, rowIndex) : props['row-class-name']]">
                 <template v-for="(item, sIndex) in children" :key="sIndex">
-                  <td v-if="item.props.type=='index'">{{rowIndex+1}}</td>
-                  <td v-else-if="item.props.type=='selection'">
+                  <td v-if="item.props?.type=='index'">{{rowIndex+1}}</td>
+                  <td v-else-if="item.props?.type=='selection'">
                   <input type="checkbox" name="vehicle" value="Bike"/>
                   </td>
                   <td v-else>{{ val[item.props?.prop] }}</td>
