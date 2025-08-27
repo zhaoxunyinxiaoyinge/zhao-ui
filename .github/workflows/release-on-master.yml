@@ -1,0 +1,45 @@
+name: Release on Push to Master
+
+on:
+  push:
+    branches: [ master ] # 当代码直接 push 到 master 分支时触发
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    # 设置环境变量
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    steps:
+      # 1. 拉取代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 拉取所有历史，这对 Changesets 计算变更很重要
+
+      # 2. 设置 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # 使用你项目所需的 Node 版本
+          cache: 'pnpm'
+
+      # 3. 安装 pnpm
+      - name: Setup pnpm
+        run: npm install -g pnpm
+
+      # 4. 安装依赖
+      - name: Install dependencies
+        run: pnpm install
+
+      # 5. 构建项目（确保 dist 目录是最新的）
+      - name: Build
+        run: pnpm run build:dist
+
+      # 6. 发布到 npm
+      - name: Publish to npm
+        run: |
+          pnpm run release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

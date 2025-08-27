@@ -16,7 +16,8 @@
     "publish-packages": "changeset publish",  
     "test": "vitest",
     "build:types": "npx vue-tsc --declaration --emitDeclarationOnly",
-    "release": "pnpm run build && pnpm run publish && pnpm run build:docs && pnpm run version-packages && pnpm run publish-packages"
+    "build:dist":"pnpm run build && pnpm run publish && pnpm run build:docs ",
+    "release": "pnpm run build:dist && pnpm run version-packages && pnpm run publish-packages"
   },
   "author": "zhaoxunyin",
   "license": "ISC",
