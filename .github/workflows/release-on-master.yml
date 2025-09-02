@@ -20,10 +20,11 @@ jobs:
 
       # 2. 设置 Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '20' # 使用你项目所需的 Node 版本
           cache: 'pnpm'
+          version: 8
 
       # 3. 安装 pnpm
       - name: Setup pnpm
